@@ -1,0 +1,114 @@
+# datapath: /srv/rdf/shared/ILSVRC/Data/CLS-LOC/
+
+# eval and save attention score
+python -m torch.distributed.launch \
+--nproc_per_node=1 --use_env main.py \
+--eval --model LeViT_128 \
+--resume https://dl.fbaipublicfiles.com/LeViT/LeViT-128-b88c2750.pth \
+--data-path /data5/ILSVRC/Data/CLS-LOC \
+--batch-size 2 \
+--need_weight \
+--output_dir attn/LeViT_128
+
+python main.py \
+--eval --model LeViT_128 \
+--resume http://dl.fbaipublicfiles.com/LeViT/LeViT-128-b88c2750.pth \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--batch-size 256 \
+--need_weight \
+--output_dir attn/LeViT_128
+
+python main.py \
+--eval --model LeViT_192 \
+--resume https://dl.fbaipublicfiles.com/LeViT/LeViT-192-92712e41.pth \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--batch-size 256 \
+--need_weight \
+--output_dir attn/LeViT_192
+
+python main.py \
+--eval --model LeViT_256 \
+--resume https://dl.fbaipublicfiles.com/LeViT/LeViT-256-13b5763e.pth \
+--data-path /srv/rdf/shared/ILSVRC/Data/CLS-LOC/ \
+--batch-size 256 \
+--need_weight \
+--output_dir attn/LeViT_256
+
+# svd
+python main.py \
+--model LeViT_128 \
+--resume https://dl.fbaipublicfiles.com/LeViT/LeViT-128-b88c2750.pth \
+--data-path /srv/rdf/shared/ILSVRC/Data/CLS-LOC/ \
+--batch-size 2 \
+--lr 5e-4 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 5e-6 \
+--output_dir exp_hr/sparse/levit_128 \
+--svd_type mix_head_fc_qk
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7,8,9 python -m torch.distributed.launch \
+--nproc_per_node=10 --use_env main.py \
+--model LeViT_192 \
+--resume exp_hr/svd/levit_192_1e-4/checkpoint_latest.pth \
+--data-path /srv/rdf/shared/ILSVRC/Data/CLS-LOC/ \
+--batch-size 64 \
+--lr 1e-4 \
+--weight-decay 1e-8 \
+--epochs 120 \
+--min-lr 5e-6 \
+--output_dir exp_hr/svd/levit_192_1e-4 \
+--svd_type mix_head_fc_qk
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7,8,9 python -m torch.distributed.launch \
+--nproc_per_node=10 --use_env main.py \
+--model LeViT_128 \
+--resume https://dl.fbaipublicfiles.com/LeViT/LeViT-128-b88c2750.pth \
+--data-path /srv/rdf/shared/ILSVRC/Data/CLS-LOC/ \
+--batch-size 64 \
+--lr 1e-4 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 5e-6 \
+--output_dir exp_hr/svd/levit_128_1e-4_2_3_3_10_8 \
+--svd_type mix_head_fc_qk
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7,8,9 python -m torch.distributed.launch \
+--nproc_per_node=10 --use_env main.py \
+--model LeViT_192 \
+--resume https://dl.fbaipublicfiles.com/LeViT/LeViT-192-92712e41.pth \
+--data-path /srv/rdf/shared/ILSVRC/Data/CLS-LOC/ \
+--batch-size 64 \
+--lr 1e-4 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 5e-6 \
+--output_dir exp_hr/svd/levit_192_2-3-4 \
+--svd_type mix_head_fc_qk
+
+
+# eval low rank model
+python main.py \
+--eval --model LeViT_192 \
+--resume exp_hr/svd/levit_192_1e-4/checkpoint_best.pth \
+--data-path /srv/rdf/shared/ILSVRC/Data/CLS-LOC/ \
+--batch-size 256 \
+--need_weight \
+--output_dir attn/LeViT_192_low_rank \
+--svd_type mix_head_fc_qk
+
+
+# finetune low rank + sparse
+python -m torch.distributed.launch \
+--nproc_per_node=8 --use_env main.py \
+--model LeViT_128 \
+--resume 'exp_hr/svd/levit_128_2-4-6/checkpoint_best.pth' \
+--data-path /data5/ILSVRC/Data/CLS-LOC \
+--lr 1e-5 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 1e-5 \
+--output_dir exp_hr/low_rank_sparse/LeViT_128/info_0.9_test \
+--mask 'masks/LeViT_128_lowrank/0.9' \
+--svd_type 'mix_head_fc_qk' \
+--restart_finetune

@@ -1,0 +1,984 @@
+Levit(
+  #params: 9.21M, #flops: 0.41G
+  (patch_embed): Sequential(
+    #params: 97.68K, #flops: 49.52M
+    (0): ConvNorm(
+      #params: 0.46K, #flops: 5.82M
+      (c): Conv2d(
+        3, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+        #params: 0.43K, #flops: 5.42M
+      )
+      (bn): BatchNorm2d(
+        16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 32, #flops: 0.4M
+      )
+    )
+    (1): Hardswish()
+    (2): ConvNorm(
+      #params: 4.67K, #flops: 14.65M
+      (c): Conv2d(
+        16, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+        #params: 4.61K, #flops: 14.45M
+      )
+      (bn): BatchNorm2d(
+        32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 64, #flops: 0.2M
+      )
+    )
+    (3): Hardswish()
+    (4): ConvNorm(
+      #params: 18.56K, #flops: 14.55M
+      (c): Conv2d(
+        32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+        #params: 18.43K, #flops: 14.45M
+      )
+      (bn): BatchNorm2d(
+        64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.13K, #flops: 0.1M
+      )
+    )
+    (5): Hardswish()
+    (6): ConvNorm(
+      #params: 73.98K, #flops: 14.5M
+      (c): Conv2d(
+        64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False
+        #params: 73.73K, #flops: 14.45M
+      )
+      (bn): BatchNorm2d(
+        128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+        #params: 0.26K, #flops: 50.18K
+      )
+    )
+  )
+  (blocks): Sequential(
+    #params: 8.34M, #flops: 0.36G
+    (0): Residual(
+      #params: 50.7K, #flops: 17.16M
+      (m): Attention(
+        #params: 50.7K, #flops: 17.16M
+        (qkv): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (proj): Sequential(
+          #params: 16.64K, #flops: 3.26M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 16.64K, #flops: 3.26M
+            (c): Linear(
+              in_features=128, out_features=128, bias=False
+              #params: 16.38K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.26K, #flops: 50.18K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 2.46M)
+        (cal_out): MatMul(#params: 0, #flops: 4.92M)
+      )
+    )
+    (1): Residual(
+      #params: 66.3K, #flops: 13M
+      (m): Sequential(
+        #params: 66.3K, #flops: 13M
+        (0): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 33.02K, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=128, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.26K, #flops: 50.18K
+          )
+        )
+      )
+    )
+    (2): Residual(
+      #params: 50.7K, #flops: 17.16M
+      (m): Attention(
+        #params: 50.7K, #flops: 17.16M
+        (qkv): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (proj): Sequential(
+          #params: 16.64K, #flops: 3.26M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 16.64K, #flops: 3.26M
+            (c): Linear(
+              in_features=128, out_features=128, bias=False
+              #params: 16.38K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.26K, #flops: 50.18K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 2.46M)
+        (cal_out): MatMul(#params: 0, #flops: 4.92M)
+      )
+    )
+    (3): Residual(
+      #params: 66.3K, #flops: 13M
+      (m): Sequential(
+        #params: 66.3K, #flops: 13M
+        (0): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 33.02K, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=128, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.26K, #flops: 50.18K
+          )
+        )
+      )
+    )
+    (4): Residual(
+      #params: 50.7K, #flops: 17.16M
+      (m): Attention(
+        #params: 50.7K, #flops: 17.16M
+        (qkv): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (proj): Sequential(
+          #params: 16.64K, #flops: 3.26M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 16.64K, #flops: 3.26M
+            (c): Linear(
+              in_features=128, out_features=128, bias=False
+              #params: 16.38K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.26K, #flops: 50.18K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 2.46M)
+        (cal_out): MatMul(#params: 0, #flops: 4.92M)
+      )
+    )
+    (5): Residual(
+      #params: 66.3K, #flops: 13M
+      (m): Sequential(
+        #params: 66.3K, #flops: 13M
+        (0): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 33.02K, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=128, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.26K, #flops: 50.18K
+          )
+        )
+      )
+    )
+    (6): Residual(
+      #params: 50.7K, #flops: 17.16M
+      (m): Attention(
+        #params: 50.7K, #flops: 17.16M
+        (qkv): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (proj): Sequential(
+          #params: 16.64K, #flops: 3.26M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 16.64K, #flops: 3.26M
+            (c): Linear(
+              in_features=128, out_features=128, bias=False
+              #params: 16.38K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.26K, #flops: 50.18K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 2.46M)
+        (cal_out): MatMul(#params: 0, #flops: 4.92M)
+      )
+    )
+    (7): Residual(
+      #params: 66.3K, #flops: 13M
+      (m): Sequential(
+        #params: 66.3K, #flops: 13M
+        (0): LinearNorm(
+          #params: 33.28K, #flops: 6.52M
+          (c): Linear(
+            in_features=128, out_features=256, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 0.1M
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 33.02K, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=128, bias=False
+            #params: 32.77K, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.26K, #flops: 50.18K
+          )
+        )
+      )
+    )
+    (8): AttentionSubsample(
+      #params: 0.23M, #flops: 29.72M
+      (kv): LinearNorm(
+        #params: 83.2K, #flops: 16.31M
+        (c): Linear(
+          in_features=128, out_features=640, bias=False
+          #params: 81.92K, #flops: 16.06M
+        )
+        (bn): BatchNorm1d(
+          640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          #params: 1.28K, #flops: 0.25M
+        )
+      )
+      (q): Sequential(
+        #params: 16.64K, #flops: 0.82M
+        (0): Subsample()
+        (1): LinearNorm(
+          #params: 16.64K, #flops: 0.82M
+          (c): Linear(
+            in_features=128, out_features=128, bias=False
+            #params: 16.38K, #flops: 0.8M
+          )
+          (bn): BatchNorm1d(
+            128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.26K, #flops: 12.54K
+          )
+        )
+      )
+      (proj): Sequential(
+        #params: 0.13M, #flops: 6.45M
+        (0): Hardswish()
+        (1): LinearNorm(
+          #params: 0.13M, #flops: 6.45M
+          (c): Linear(
+            in_features=512, out_features=256, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 25.09K
+          )
+        )
+      )
+      (cal_attn): MatMul(#params: 0, #flops: 1.23M)
+      (cal_out): MatMul(#params: 0, #flops: 4.92M)
+    )
+    (9): Residual(
+      #params: 0.26M, #flops: 12.92M
+      (m): Sequential(
+        #params: 0.26M, #flops: 12.92M
+        (0): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.13M, #flops: 6.45M
+          (c): Linear(
+            in_features=512, out_features=256, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 25.09K
+          )
+        )
+      )
+    )
+    (10): Residual(
+      #params: 0.2M, #flops: 10.63M
+      (m): Attention(
+        #params: 0.2M, #flops: 10.63M
+        (qkv): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (proj): Sequential(
+          #params: 66.05K, #flops: 3.24M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 66.05K, #flops: 3.24M
+            (c): Linear(
+              in_features=256, out_features=256, bias=False
+              #params: 65.54K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.51K, #flops: 25.09K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 0.31M)
+        (cal_out): MatMul(#params: 0, #flops: 0.61M)
+      )
+    )
+    (11): Residual(
+      #params: 0.26M, #flops: 12.92M
+      (m): Sequential(
+        #params: 0.26M, #flops: 12.92M
+        (0): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.13M, #flops: 6.45M
+          (c): Linear(
+            in_features=512, out_features=256, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 25.09K
+          )
+        )
+      )
+    )
+    (12): Residual(
+      #params: 0.2M, #flops: 10.63M
+      (m): Attention(
+        #params: 0.2M, #flops: 10.63M
+        (qkv): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (proj): Sequential(
+          #params: 66.05K, #flops: 3.24M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 66.05K, #flops: 3.24M
+            (c): Linear(
+              in_features=256, out_features=256, bias=False
+              #params: 65.54K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.51K, #flops: 25.09K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 0.31M)
+        (cal_out): MatMul(#params: 0, #flops: 0.61M)
+      )
+    )
+    (13): Residual(
+      #params: 0.26M, #flops: 12.92M
+      (m): Sequential(
+        #params: 0.26M, #flops: 12.92M
+        (0): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.13M, #flops: 6.45M
+          (c): Linear(
+            in_features=512, out_features=256, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 25.09K
+          )
+        )
+      )
+    )
+    (14): Residual(
+      #params: 0.2M, #flops: 10.63M
+      (m): Attention(
+        #params: 0.2M, #flops: 10.63M
+        (qkv): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (proj): Sequential(
+          #params: 66.05K, #flops: 3.24M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 66.05K, #flops: 3.24M
+            (c): Linear(
+              in_features=256, out_features=256, bias=False
+              #params: 65.54K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.51K, #flops: 25.09K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 0.31M)
+        (cal_out): MatMul(#params: 0, #flops: 0.61M)
+      )
+    )
+    (15): Residual(
+      #params: 0.26M, #flops: 12.92M
+      (m): Sequential(
+        #params: 0.26M, #flops: 12.92M
+        (0): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.13M, #flops: 6.45M
+          (c): Linear(
+            in_features=512, out_features=256, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 25.09K
+          )
+        )
+      )
+    )
+    (16): Residual(
+      #params: 0.2M, #flops: 10.63M
+      (m): Attention(
+        #params: 0.2M, #flops: 10.63M
+        (qkv): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (proj): Sequential(
+          #params: 66.05K, #flops: 3.24M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 66.05K, #flops: 3.24M
+            (c): Linear(
+              in_features=256, out_features=256, bias=False
+              #params: 65.54K, #flops: 3.21M
+            )
+            (bn): BatchNorm1d(
+              256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.51K, #flops: 25.09K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 0.31M)
+        (cal_out): MatMul(#params: 0, #flops: 0.61M)
+      )
+    )
+    (17): Residual(
+      #params: 0.26M, #flops: 12.92M
+      (m): Sequential(
+        #params: 0.26M, #flops: 12.92M
+        (0): LinearNorm(
+          #params: 0.13M, #flops: 6.47M
+          (c): Linear(
+            in_features=256, out_features=512, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.02K, #flops: 50.18K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.13M, #flops: 6.45M
+          (c): Linear(
+            in_features=512, out_features=256, bias=False
+            #params: 0.13M, #flops: 6.42M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 25.09K
+          )
+        )
+      )
+    )
+    (18): AttentionSubsample(
+      #params: 0.79M, #flops: 24.55M
+      (kv): LinearNorm(
+        #params: 0.33M, #flops: 16.18M
+        (c): Linear(
+          in_features=256, out_features=1280, bias=False
+          #params: 0.33M, #flops: 16.06M
+        )
+        (bn): BatchNorm1d(
+          1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          #params: 2.56K, #flops: 0.13M
+        )
+      )
+      (q): Sequential(
+        #params: 66.05K, #flops: 1.06M
+        (0): Subsample()
+        (1): LinearNorm(
+          #params: 66.05K, #flops: 1.06M
+          (c): Linear(
+            in_features=256, out_features=256, bias=False
+            #params: 65.54K, #flops: 1.05M
+          )
+          (bn): BatchNorm1d(
+            256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.51K, #flops: 8.19K
+          )
+        )
+      )
+      (proj): Sequential(
+        #params: 0.39M, #flops: 6.3M
+        (0): Hardswish()
+        (1): LinearNorm(
+          #params: 0.39M, #flops: 6.3M
+          (c): Linear(
+            in_features=1024, out_features=384, bias=False
+            #params: 0.39M, #flops: 6.29M
+          )
+          (bn): BatchNorm1d(
+            384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.77K, #flops: 12.29K
+          )
+        )
+      )
+      (cal_attn): MatMul(#params: 0, #flops: 0.2M)
+      (cal_out): MatMul(#params: 0, #flops: 0.8M)
+    )
+    (19): Residual(
+      #params: 0.59M, #flops: 9.47M
+      (m): Sequential(
+        #params: 0.59M, #flops: 9.47M
+        (0): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.3M, #flops: 4.73M
+          (c): Linear(
+            in_features=768, out_features=384, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.77K, #flops: 12.29K
+          )
+        )
+      )
+    )
+    (20): Residual(
+      #params: 0.44M, #flops: 7.26M
+      (m): Attention(
+        #params: 0.44M, #flops: 7.26M
+        (qkv): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (proj): Sequential(
+          #params: 0.15M, #flops: 2.37M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 0.15M, #flops: 2.37M
+            (c): Linear(
+              in_features=384, out_features=384, bias=False
+              #params: 0.15M, #flops: 2.36M
+            )
+            (bn): BatchNorm1d(
+              384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.77K, #flops: 12.29K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 49.15K)
+        (cal_out): MatMul(#params: 0, #flops: 98.3K)
+      )
+    )
+    (21): Residual(
+      #params: 0.59M, #flops: 9.47M
+      (m): Sequential(
+        #params: 0.59M, #flops: 9.47M
+        (0): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.3M, #flops: 4.73M
+          (c): Linear(
+            in_features=768, out_features=384, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.77K, #flops: 12.29K
+          )
+        )
+      )
+    )
+    (22): Residual(
+      #params: 0.44M, #flops: 7.26M
+      (m): Attention(
+        #params: 0.44M, #flops: 7.26M
+        (qkv): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (proj): Sequential(
+          #params: 0.15M, #flops: 2.37M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 0.15M, #flops: 2.37M
+            (c): Linear(
+              in_features=384, out_features=384, bias=False
+              #params: 0.15M, #flops: 2.36M
+            )
+            (bn): BatchNorm1d(
+              384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.77K, #flops: 12.29K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 49.15K)
+        (cal_out): MatMul(#params: 0, #flops: 98.3K)
+      )
+    )
+    (23): Residual(
+      #params: 0.59M, #flops: 9.47M
+      (m): Sequential(
+        #params: 0.59M, #flops: 9.47M
+        (0): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.3M, #flops: 4.73M
+          (c): Linear(
+            in_features=768, out_features=384, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.77K, #flops: 12.29K
+          )
+        )
+      )
+    )
+    (24): Residual(
+      #params: 0.44M, #flops: 7.26M
+      (m): Attention(
+        #params: 0.44M, #flops: 7.26M
+        (qkv): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (proj): Sequential(
+          #params: 0.15M, #flops: 2.37M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 0.15M, #flops: 2.37M
+            (c): Linear(
+              in_features=384, out_features=384, bias=False
+              #params: 0.15M, #flops: 2.36M
+            )
+            (bn): BatchNorm1d(
+              384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.77K, #flops: 12.29K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 49.15K)
+        (cal_out): MatMul(#params: 0, #flops: 98.3K)
+      )
+    )
+    (25): Residual(
+      #params: 0.59M, #flops: 9.47M
+      (m): Sequential(
+        #params: 0.59M, #flops: 9.47M
+        (0): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.3M, #flops: 4.73M
+          (c): Linear(
+            in_features=768, out_features=384, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.77K, #flops: 12.29K
+          )
+        )
+      )
+    )
+    (26): Residual(
+      #params: 0.44M, #flops: 7.26M
+      (m): Attention(
+        #params: 0.44M, #flops: 7.26M
+        (qkv): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (proj): Sequential(
+          #params: 0.15M, #flops: 2.37M
+          (0): Hardswish()
+          (1): LinearNorm(
+            #params: 0.15M, #flops: 2.37M
+            (c): Linear(
+              in_features=384, out_features=384, bias=False
+              #params: 0.15M, #flops: 2.36M
+            )
+            (bn): BatchNorm1d(
+              384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              #params: 0.77K, #flops: 12.29K
+            )
+          )
+        )
+        (cal_attn): MatMul(#params: 0, #flops: 49.15K)
+        (cal_out): MatMul(#params: 0, #flops: 98.3K)
+      )
+    )
+    (27): Residual(
+      #params: 0.59M, #flops: 9.47M
+      (m): Sequential(
+        #params: 0.59M, #flops: 9.47M
+        (0): LinearNorm(
+          #params: 0.3M, #flops: 4.74M
+          (c): Linear(
+            in_features=384, out_features=768, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 1.54K, #flops: 24.58K
+          )
+        )
+        (1): Hardswish()
+        (2): LinearNorm(
+          #params: 0.3M, #flops: 4.73M
+          (c): Linear(
+            in_features=768, out_features=384, bias=False
+            #params: 0.29M, #flops: 4.72M
+          )
+          (bn): BatchNorm1d(
+            384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            #params: 0.77K, #flops: 12.29K
+          )
+        )
+      )
+    )
+  )
+  (head): NormLinear(
+    #params: 0.39M, #flops: 0.38M
+    (bn): BatchNorm1d(
+      384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+      #params: 0.77K, #flops: 0.77K
+    )
+    (l): Linear(
+      in_features=384, out_features=1000, bias=True
+      #params: 0.39M, #flops: 0.38M
+    )
+  )
+  (head_dist): NormLinear(
+    #params: 0.39M, #flops: 0.38M
+    (bn): BatchNorm1d(
+      384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+      #params: 0.77K, #flops: 0.77K
+    )
+    (l): Linear(
+      in_features=384, out_features=1000, bias=True
+      #params: 0.39M, #flops: 0.38M
+    )
+  )
+)

@@ -1,0 +1,141 @@
+srun --gres=gpu:8 --cpus-per-task=20 -N 1 --partition=V100x8 --exclusive --pty $SHELL
+
+python main.py --eval --model deit_tiny_patch16_224 --resume https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth --data-path /root/data/ILSVRC/Data/CLS-LOC
+python main.py --eval --model deit_small_patch16_224 --resume https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth --data-path /root/data/ILSVRC/Data/CLS-LOC
+python main.py --eval --model deit_base_patch16_224 --resume https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth --data-path /root/data/ILSVRC/Data/CLS-LOC
+
+# generate attention scores
+python main.py \
+--eval \
+--model deit_tiny_patch16_224 \
+--finetune exp_hr/svd/deit_tiny_1e-4_5e-6_100_mix_head_fc_qk_hid_2/checkpoint_best.pth \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--svd_type 'mix_head_fc_qk' \
+--need_weight \
+--output_dir attn/deit_tiny_1e-4_lowrank_qk_hid_2 \
+--batch-size 256
+
+
+# ----
+python main.py \
+--eval \
+--model deit_base_patch16_224 \
+--resume 'exp_hr/svd/deit_base_1e-4_5e-6_100_mix_head_fc_qk/checkpoint_best.pth' \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--svd_type 'mix_head_fc_qk' \
+--need_weight \
+--mask_path '' \
+--output_dir attn/deit_tiny_1e-4_lowrank_qk_hid_2
+
+# debugging
+python main.py \
+--eval \
+--model deit_tiny_patch16_224 \
+--resume 'exp_hr/svd/deit_tiny_1e-4_5e-6_100_mix_head_fc_qk_hid_2/checkpoint.pth' \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--batch-size 2 \
+--svd_type 'mix_head_fc_qk'
+
+
+# generate masks
+python gen_mask.py \
+--method 'info' \
+--attn './attn/deit_tiny_lowrank_qk_hid_2/attention_score_pruned.npy' \
+--info_cut 0.21 \
+--output_dir './masks/deit_tiny_lowrank_hid_2'
+
+python gen_mask.py \
+--method 'info' \
+--attn './attn/deit_base/attention_score_pruned.npy' \
+--info_cut 0.31 \
+--output_dir './masks/deit_base_lowrank/'
+
+
+
+# visualize mask
+python plot_attn_map.py \
+--attn './attn/deit_base/attention_score_pruned.npy' \
+--save_dir './attn/deit_base/attention_score_pruned.png'
+
+python plot_attn_map.py \
+--attn './attn/deit_small/attention_score_pruned.npy' \
+--save_dir './attn/deit_small/attention_score_pruned.png'
+
+python plot_attn_map.py \
+--attn './attn/deit_tiny/attention_score_pruned.npy' \
+--save_dir './attn/deit_tiny/attention_score_pruned.png'
+
+python plot_attn_map.py \
+--attn './attn/deit_small_lowrank_qk/attention_score_pruned.npy' \
+--save_dir './attn/deit_small_lowrank_qk/attention_score_pruned.png'
+
+# ---
+
+python plot_attn_map.py \
+--attn './masks/deit_base/info_0.9.npy' \
+--save_dir './masks/deit_base/info_0.9.png'
+
+python plot_attn_map.py \
+--attn './masks/deit_small/info_0.9.npy' \
+--save_dir './masks/deit_small/info_0.9.png'
+
+python plot_attn_map.py \
+--attn './masks/deit_tiny/info_0.9.npy' \
+--save_dir './masks/deit_tiny/info_0.9.png'
+
+# try svd
+python -m torch.distributed.launch \
+--nproc_per_node=8 --use_env main.py \
+--model deit_base_patch16_224 \
+--resume https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--lr 1e-5 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 1e-5 \
+--output_dir exp_hr/svd/deit_base_1e-5_100_mix_head_fc \
+--svd_type 'mix_head_fc'
+
+### DeiT-Base
+python -m torch.distributed.launch \
+--nproc_per_node=8 --use_env main.py \
+--model deit_base_patch16_224 \
+--resume https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--lr 5e-4 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 5e-6 \
+--output_dir exp_hr/svd/deit_base_5e-4_5e-6_100_mix_head_fc_qk \
+--svd_type 'mix_head_fc_qk'
+
+python -m torch.distributed.launch \
+--nproc_per_node=8 --use_env main.py \
+--model deit_base_patch16_224 \
+--resume https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--lr 1e-4 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 5e-6 \
+--output_dir exp_hr/svd/deit_base_1e-4_5e-6_100_mix_head_fc_qk \
+--svd_type 'mix_head_fc_qk'
+
+
+# finetune lowrank + sparse
+python -m torch.distributed.launch \
+--nproc_per_node=8 --use_env main.py \
+--model deit_base_patch16_224 \
+--resume 'exp_hr/svd/deit_base_1e-4_5e-6_100_mix_head_fc_qk/checkpoint_best.pth' \
+--data-path /root/data/ILSVRC/Data/CLS-LOC \
+--lr 1e-5 \
+--weight-decay 1e-8 \
+--epochs 100 \
+--min-lr 1e-5 \
+--output_dir exp_hr/lowrank_sparse/deit_base/deit_base_info60 \
+--mask_path 'masks/deit_base_lowrank/info_0.6.npy' \
+--svd_type 'mix_head_fc_qk' \
+--restart_finetune
+
+
+

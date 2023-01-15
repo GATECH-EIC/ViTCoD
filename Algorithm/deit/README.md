@@ -100,7 +100,7 @@ python -m torch.distributed.launch \
 --restart_finetune
 ```
 
-* To evaluate the model, run
+To evaluate the model, run
 ```
 python main.py \
 --eval \

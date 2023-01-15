@@ -1,4 +1,4 @@
-# ViTCod Algorithm on DeiT
+# ViTCoD Algorithm on DeiT
 
 For deit, we built on the official implementation (https://github.com/facebookresearch/deit).
 
@@ -6,6 +6,7 @@ We have provided pretrained checkpoints of DeiT models with low rank approximati
 https://drive.google.com/drive/folders/1G4naJROahOznkRMj5zJPc3KSUdHvlk7Z?usp=sharing
 
 We have provided the attention masks for DeiT models at different sparsity. To directly finetune a DeiT model with low rank approximations of its original attention map with an additional sparse attention mask, 
+
 ```
 python -m torch.distributed.launch \
 --nproc_per_node=8 --use_env main.py \
@@ -26,7 +27,7 @@ python -m torch.distributed.launch \
 Preparation steps:
 Replace `vision_transformer.py` file in `timm` library with `timm/vision_transformer.py` in this repo. Add `timm/mask_utils.py` and `timm/utils.py` to `/timm/models/` in the `timm` library.
 
-Step 1:
+* Step 1:
 To finetune a pre-trained DeiT model with low rank approximation of its attention map, execute the following command
 ```
 python -m torch.distributed.launch \
@@ -56,7 +57,7 @@ the evaluation should give
 * Acc@1 81.576 Acc@5 95.214 loss 0.854
 ```
 
-Step 2:
+* Step 2:
 To generate average attention maps DeiT trained with low rank approximation of its attention map (from step 1) on the training data of ImageNet 2012,
 ```
 python main.py \
@@ -69,7 +70,8 @@ python main.py \
 --output_dir /path/to/lowrank_attention_map \
 --batch-size 256
 ```
-Step 3:
+
+* Step 3:
 To generate attention masks of various sparsity levels given the average attention map on training data,
 ```
 python gen_mask.py \
@@ -80,7 +82,7 @@ python gen_mask.py \
 ```
 In the command above, the `method` argument controls which method to generate masks. In our paper, we used `info`. The `info_cut` argument is a number between `[0,1]` that determines the sparsity level of the output attention mask (for more details, we refer the readers to the paper). 
 
-Step 4:
+* Step 4:
 Finetune a DeiT model with low rank approximations of its original attention map with an additional attention mask,
 ```
 python -m torch.distributed.launch \
@@ -97,7 +99,8 @@ python -m torch.distributed.launch \
 --svd_type 'mix_head_fc_qk' \
 --restart_finetune
 ```
-To evaluate the model, run
+
+* To evaluate the model, run
 ```
 python main.py \
 --eval \

@@ -15,7 +15,7 @@ This is because there is a large difference between ViTs and Transformers for na
 tasks: ViTs have a relatively fixed number of input tokens, whose attention maps can be pruned by up to 90% even with fixed sparse patterns, without severely hurting the model accuracy (e.g., <=1.5% under 90% pruning ratio); while NLP Transformers need to handle input sequences of varying numbers of tokens and rely on on-the-fly predictions of dynamic sparse attention patterns for each input to achieve a decent sparsity (e.g., >=50%).
 
 <p align="center">
-    <img src="./figures/Vision_vs_NLP.png" width="550">
+    <img src="./Figures/Vision_vs_NLP.png" width="550">
 </p>
 
 * ***New Opportunity***: The fixed sparse patterns in ViTs can alleviate the stringent need for adopting on-the-fly sparse attention pattern prediction and highly reconfigurable processing element (PE) designs.
@@ -34,7 +34,7 @@ fixed patterns for regularizing two levels of workloads without hurting the accu
 * ***On the hardware level***, we develop a dedicated accelerator to simultaneously coordinate the aforementioned enforced denser and sparser workloads for boosted hardware utilization, while integrating on-chip encoder and decoder engines to leverage ViTCoD’s algorithm pipeline for much reduced data movements.
 
 <p align="center">
-    <img src="./figures/overview.png" width="800">
+    <img src="./Figures/overview.png" width="800">
 </p>
 
 ---

@@ -1,5 +1,5 @@
-# ViTCod
-## DeiT
+# ViTCod Algorithm on DeiT
+
 For deit, we built on the official implementation (https://github.com/facebookresearch/deit).
 
 We have provided pretrained checkpoints of DeiT models with low rank approximations of its attention map, and DeiT models with low rank approximations and sparse attention masks, both pretrained from ImageNet 2012.

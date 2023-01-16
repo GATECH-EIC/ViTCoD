@@ -1,12 +1,13 @@
 # The Hardware Simulator for ViTCoD Accelerator 
 <p align="center">
-    <img src="./figs/arch.png" width="600">
+    <img src="./figs/arch.png" width="800">
 </p>
 
 ## Polarize the sparsed attention maps
 
 <p align="center">
-    <img src="./figs/sparse_attention.jpg" width="420">
+    <img src="./figs/sparse_attention.jpg" width="520
+    ">
 </p>
 
 To polarize the attention map stored in `./masks` (e.g., the attention maps of Deit-Tiny trained under 95% sparsity and stored in ./masks/deit_tiny_lowrank/info_0.95.npy) to be either denser or sparser for enhancing more regular workloads, run

@@ -26,7 +26,7 @@ tasks: ViTs have a relatively fixed number of input tokens, whose attention maps
 
 ## Overview of Our ViT Co-Design Framework
 
-we propose a dedicated algorithm and accelerator co-design framework dubbed ViTCoD for accelerating ViTs, i.e., Vision Tranformers.
+We propose a dedicated algorithm and accelerator co-design framework dubbed ViTCoD for accelerating ViTs, i.e., Vision Tranformers.
 
 * ***On the algorithm level***, ViTCoD prunes and polarizes the attention maps to have either denser or sparser
 fixed patterns for regularizing two levels of workloads without hurting the accuracy, largely reducing the attention computations while leaving room for alleviating the remaining dominant data movements; on top of that, we further integrate a lightweight and learnable auto-encoder module to enable trading the dominant high-cost data movements for lower-cost computations.

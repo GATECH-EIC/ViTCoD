@@ -31,7 +31,7 @@ where we adopt a ***dynamic*** *PE allocation* between the ***denser*** and ***s
 To simulate the end-to-end latency, 
 * first run
 ````
-python ViTCoD.py
+python ViT_FFN.py
 ````
 which simulates the latency consumed by the remaining ***linear projections*** and ***MLPs***, 
 * then add the simulated latency with the previously simulated attention latency. 

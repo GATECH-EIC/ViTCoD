@@ -1,6 +1,6 @@
-# ViTCoD Algorithm on LeViT
+# Profiling ViTs
 
-Will update the readme ASAP.
+The code will be uploaded as soon as we sorted it out.
 
 ---
 

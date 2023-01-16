@@ -1,6 +1,6 @@
-# ViTCoD Hardware Simulator
+# Profiling ViTs
 
-Will post the readme ASAP.
+The code will be uploaded as soon as we sorted it out.
 
 ---
 

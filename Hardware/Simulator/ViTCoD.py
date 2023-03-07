@@ -79,7 +79,8 @@ for p in sparse:
                 # ############ k #########
                 # ######### Load k and decoder weight
                 preload_cycles += my_SRAM.preload_K(nums=head*ratio*1* K.shape[1], bits=8, bandwidth_ratio=1)
-                preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1* K.shape[1], bits=8, bandwidth_ratio=1/head)
+                if _sta_k == 0:
+                    preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
                 # ######### Preprocessing 
                 for k in range((math.ceil((head*ratio*1* K.shape[1])/int(PE_width*PE_height/head)))):
                     PRE_cycles += 1
@@ -90,7 +91,8 @@ for p in sparse:
                         # reload_ratio = (Q.shape[0]-(my_SRAM.max_Q/(8*Q.shape[1]*head)))/Q.shape[0]
                         reload_ratio = 0
                         preload_cycles += my_SRAM.preload_Q(nums=head*ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1)*(1+reload_ratio)
-                        preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1/head)*(1+reload_ratio)
+                        if _sta_q == 0: 
+                            preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
                         # ######### Preprocessing 
                         for q in range(math.ceil((head*ratio*1* Q.shape[1])/int(PE_width*PE_height/head))):
                             PRE_cycles += 1*(1+reload_ratio)
@@ -108,7 +110,8 @@ for p in sparse:
             # ######### Load K and decoder weights
             for i in range(K.shape[0]-global_tokens):
                 preload_cycles += my_SRAM.preload_K(nums=head*ratio*1* K.shape[1], bits=8, bandwidth_ratio=1)
-                preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1* K.shape[1], bits=8, bandwidth_ratio=1/head)
+                if i == 0:
+                    preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
                 # ######### Preprocessing 
                 for k in range(math.ceil((head*ratio*1* K.shape[1])/int(PE_width*PE_height/head))):
                     PRE_cycles += 1
@@ -121,7 +124,8 @@ for p in sparse:
                 reload_ratio = len(sparser)/mask[:, global_tokens:].shape[1]
                 for i in range(Q.shape[0]):
                     preload_cycles += my_SRAM.preload_Q(nums=head*ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1)*reload_ratio
-                    preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1/head)*reload_ratio
+                    if i == 0:
+                        preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
                     # ######### Preprocessing 
                     for k in range(math.ceil((head*ratio*1* Q.shape[1])/int(PE_width*PE_height/head))):
                         PRE_cycles += 1*reload_ratio

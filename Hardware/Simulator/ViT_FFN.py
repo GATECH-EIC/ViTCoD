@@ -118,7 +118,8 @@ for p in sparse:
             # store back to DRAM
             # process Q
             for num in range(Q.shape[0]): 
-                preload_cycles += my_SRAM.preload_encoder(nums=head*1*Q.shape[1], bits=8, bandwidth_ratio=1/(head*ratio))
+                if num == 0:
+                    preload_cycles += my_SRAM.preload_encoder(nums=head*1, bits=8, bandwidth_ratio=1/(head*ratio))
                 # ######### Preprocessing 
                 for k in range(math.ceil((head*1* Q.shape[1])//int(PE_width*PE_height/(head*ratio)))):
                     PRE_cycles += 1
@@ -127,7 +128,8 @@ for p in sparse:
 
             # process K
             for num in range(K.shape[0]): 
-                preload_cycles += my_SRAM.preload_encoder(nums=head*1*K.shape[1], bits=8, bandwidth_ratio=1/(head*ratio))
+                if num == 0:
+                    preload_cycles += my_SRAM.preload_encoder(nums=head*1, bits=8, bandwidth_ratio=1/(head*ratio))
                 # ######### Preprocessing 
                 for k in range(math.ceil((head*1* K.shape[1])//int(PE_width*PE_height/(head*ratio)))):
                     PRE_cycles += 1

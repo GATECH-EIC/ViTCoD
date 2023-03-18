@@ -1,0 +1,459 @@
+[
+  { "count" : 210 }
+, { "name" : "ReduceMean_0", "timeMs" : 11.3575, "averageMs" : 0.0540835, "percentage" : 0.362703 }
+, { "name" : "Sub_1", "timeMs" : 7.97965, "averageMs" : 0.0379983, "percentage" : 0.25483 }
+, { "name" : "PWN((Unnamed Layer* 3) [Constant] + (Unnamed Layer* 4) [Shuffle], Pow_4)", "timeMs" : 7.74137, "averageMs" : 0.0368637, "percentage" : 0.247221 }
+, { "name" : "ReduceMean_5", "timeMs" : 7.32288, "averageMs" : 0.0348709, "percentage" : 0.233856 }
+, { "name" : "(Unnamed Layer* 12) [Constant] + (Unnamed Layer* 13) [Shuffle]", "timeMs" : 2.40426, "averageMs" : 0.0114488, "percentage" : 0.07678 }
+, { "name" : "(Unnamed Layer* 15) [Constant] + (Unnamed Layer* 16) [Shuffle]", "timeMs" : 2.06768, "averageMs" : 0.0098461, "percentage" : 0.0660314 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 7) [Constant] + (Unnamed Layer* 8) [Shuffle], Add_7), Sqrt_8), Div_9), Mul_10), Add_11)", "timeMs" : 9.22349, "averageMs" : 0.0439214, "percentage" : 0.294552 }
+, { "name" : "(Unnamed Layer* 18) [Constant] + (Unnamed Layer* 19) [Shuffle]", "timeMs" : 0.174336, "averageMs" : 0.000830171, "percentage" : 0.00556742 }
+, { "name" : "MatMul_12", "timeMs" : 36.1024, "averageMs" : 0.171916, "percentage" : 1.15293 }
+, { "name" : "Split_13_2", "timeMs" : 4.43299, "averageMs" : 0.0211095, "percentage" : 0.141568 }
+, { "name" : "Reshape_20 + Transpose_21 + Reshape_22", "timeMs" : 5.4248, "averageMs" : 0.0258324, "percentage" : 0.173241 }
+, { "name" : "Split_13", "timeMs" : 6.2848, "averageMs" : 0.0299276, "percentage" : 0.200705 }
+, { "name" : "Reshape_14 + Transpose_15 + Reshape_16", "timeMs" : 5.94179, "averageMs" : 0.0282942, "percentage" : 0.189751 }
+, { "name" : "Split_13_1", "timeMs" : 9.66893, "averageMs" : 0.0460425, "percentage" : 0.308778 }
+, { "name" : "Reshape_17 + Transpose_18 + Reshape_19 + Transpose_23", "timeMs" : 7.46637, "averageMs" : 0.0355541, "percentage" : 0.238439 }
+, { "name" : "MatMul_24", "timeMs" : 20.4816, "averageMs" : 0.0975315, "percentage" : 0.654081 }
+, { "name" : "Softmax_27", "timeMs" : 23.8794, "averageMs" : 0.113711, "percentage" : 0.762588 }
+, { "name" : "MatMul_28", "timeMs" : 18.442, "averageMs" : 0.087819, "percentage" : 0.588945 }
+, { "name" : "Reshape_29 + Transpose_30 + Reshape_31", "timeMs" : 5.06589, "averageMs" : 0.0241233, "percentage" : 0.161779 }
+, { "name" : "(Unnamed Layer* 45) [Constant] + (Unnamed Layer* 46) [Shuffle]", "timeMs" : 0.119456, "averageMs" : 0.000568838, "percentage" : 0.00381483 }
+, { "name" : "MatMul_32", "timeMs" : 12.5836, "averageMs" : 0.059922, "percentage" : 0.401858 }
+, { "name" : "(Unnamed Layer* 48) [Constant] + (Unnamed Layer* 49) [Shuffle]", "timeMs" : 0.15232, "averageMs" : 0.000725333, "percentage" : 0.00486434 }
+, { "name" : "PWN(Add_33, Add_34)", "timeMs" : 3.66813, "averageMs" : 0.0174673, "percentage" : 0.117142 }
+, { "name" : "ReduceMean_35", "timeMs" : 1.83664, "averageMs" : 0.0087459, "percentage" : 0.0586531 }
+, { "name" : "Sub_36", "timeMs" : 2.9696, "averageMs" : 0.014141, "percentage" : 0.0948343 }
+, { "name" : "PWN((Unnamed Layer* 55) [Constant] + (Unnamed Layer* 56) [Shuffle], Pow_39)", "timeMs" : 2.2169, "averageMs" : 0.0105567, "percentage" : 0.0707967 }
+, { "name" : "ReduceMean_40", "timeMs" : 1.68733, "averageMs" : 0.00803489, "percentage" : 0.0538849 }
+, { "name" : "(Unnamed Layer* 64) [Constant] + (Unnamed Layer* 65) [Shuffle]", "timeMs" : 0.277984, "averageMs" : 0.00132373, "percentage" : 0.00887742 }
+, { "name" : "(Unnamed Layer* 67) [Constant] + (Unnamed Layer* 68) [Shuffle]", "timeMs" : 0.389984, "averageMs" : 0.00185707, "percentage" : 0.0124541 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 59) [Constant] + (Unnamed Layer* 60) [Shuffle], Add_42), Sqrt_43), Div_44), Mul_45), Add_46)", "timeMs" : 5.75862, "averageMs" : 0.027422, "percentage" : 0.183902 }
+, { "name" : "(Unnamed Layer* 70) [Constant] + (Unnamed Layer* 71) [Shuffle]", "timeMs" : 0.145216, "averageMs" : 0.000691505, "percentage" : 0.00463748 }
+, { "name" : "MatMul_47", "timeMs" : 35.4893, "averageMs" : 0.168997, "percentage" : 1.13335 }
+, { "name" : "(Unnamed Layer* 73) [Constant] + (Unnamed Layer* 74) [Shuffle]", "timeMs" : 0.296192, "averageMs" : 0.00141044, "percentage" : 0.0094589 }
+, { "name" : "PWN(Add_48, PWN((Unnamed Layer* 84) [Constant] + (Unnamed Layer* 85) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 80) [Constant] + (Unnamed Layer* 81) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 76) [Constant] + (Unnamed Layer* 77) [Shuffle], Div_50), Erf_51), Add_53)), Mul_54), Mul_56)))", "timeMs" : 11.7733, "averageMs" : 0.0560635, "percentage" : 0.375982 }
+, { "name" : "(Unnamed Layer* 87) [Constant] + (Unnamed Layer* 88) [Shuffle]", "timeMs" : 0.127936, "averageMs" : 0.000609218, "percentage" : 0.00408563 }
+, { "name" : "MatMul_57", "timeMs" : 40.1542, "averageMs" : 0.19121, "percentage" : 1.28232 }
+, { "name" : "(Unnamed Layer* 90) [Constant] + (Unnamed Layer* 91) [Shuffle]", "timeMs" : 0.13088, "averageMs" : 0.000623237, "percentage" : 0.00417965 }
+, { "name" : "PWN(Add_58, Add_59)", "timeMs" : 3.4951, "averageMs" : 0.0166433, "percentage" : 0.111616 }
+, { "name" : "ReduceMean_60", "timeMs" : 1.90022, "averageMs" : 0.00904869, "percentage" : 0.0606837 }
+, { "name" : "Sub_61", "timeMs" : 2.93795, "averageMs" : 0.0139903, "percentage" : 0.0938236 }
+, { "name" : "PWN((Unnamed Layer* 97) [Constant] + (Unnamed Layer* 98) [Shuffle], Pow_64)", "timeMs" : 1.72618, "averageMs" : 0.00821988, "percentage" : 0.0551255 }
+, { "name" : "ReduceMean_65", "timeMs" : 1.36333, "averageMs" : 0.00649204, "percentage" : 0.0435379 }
+, { "name" : "(Unnamed Layer* 106) [Constant] + (Unnamed Layer* 107) [Shuffle]", "timeMs" : 0.108448, "averageMs" : 0.000516419, "percentage" : 0.00346329 }
+, { "name" : "(Unnamed Layer* 109) [Constant] + (Unnamed Layer* 110) [Shuffle]", "timeMs" : 0.106944, "averageMs" : 0.000509258, "percentage" : 0.00341527 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 101) [Constant] + (Unnamed Layer* 102) [Shuffle], Add_67), Sqrt_68), Div_69), Mul_70), Add_71)", "timeMs" : 4.49696, "averageMs" : 0.0214141, "percentage" : 0.143611 }
+, { "name" : "(Unnamed Layer* 112) [Constant] + (Unnamed Layer* 113) [Shuffle]", "timeMs" : 0.123808, "averageMs" : 0.000589561, "percentage" : 0.0039538 }
+, { "name" : "MatMul_72", "timeMs" : 29.8203, "averageMs" : 0.142002, "percentage" : 0.952314 }
+, { "name" : "Split_73_2", "timeMs" : 4.21142, "averageMs" : 0.0200544, "percentage" : 0.134492 }
+, { "name" : "Reshape_80 + Transpose_81 + Reshape_82", "timeMs" : 5.4592, "averageMs" : 0.0259962, "percentage" : 0.17434 }
+, { "name" : "Split_73", "timeMs" : 6.8825, "averageMs" : 0.0327738, "percentage" : 0.219793 }
+, { "name" : "Reshape_74 + Transpose_75 + Reshape_76", "timeMs" : 4.67145, "averageMs" : 0.022245, "percentage" : 0.149183 }
+, { "name" : "Split_73_1", "timeMs" : 5.41139, "averageMs" : 0.0257685, "percentage" : 0.172813 }
+, { "name" : "Reshape_77 + Transpose_78 + Reshape_79 + Transpose_83", "timeMs" : 4.76215, "averageMs" : 0.0226769, "percentage" : 0.152079 }
+, { "name" : "MatMul_84", "timeMs" : 15.8277, "averageMs" : 0.0753702, "percentage" : 0.505459 }
+, { "name" : "Softmax_87", "timeMs" : 23.9624, "averageMs" : 0.114107, "percentage" : 0.765239 }
+, { "name" : "MatMul_88", "timeMs" : 17.9625, "averageMs" : 0.0855358, "percentage" : 0.573634 }
+, { "name" : "Reshape_89 + Transpose_90 + Reshape_91", "timeMs" : 5.14726, "averageMs" : 0.0245108, "percentage" : 0.164378 }
+, { "name" : "(Unnamed Layer* 139) [Constant] + (Unnamed Layer* 140) [Shuffle]", "timeMs" : 0.136, "averageMs" : 0.000647619, "percentage" : 0.00434316 }
+, { "name" : "MatMul_92", "timeMs" : 12.3765, "averageMs" : 0.0589359, "percentage" : 0.395245 }
+, { "name" : "(Unnamed Layer* 142) [Constant] + (Unnamed Layer* 143) [Shuffle]", "timeMs" : 0.157408, "averageMs" : 0.000749562, "percentage" : 0.00502683 }
+, { "name" : "PWN(Add_93, Add_94)", "timeMs" : 3.7304, "averageMs" : 0.0177638, "percentage" : 0.11913 }
+, { "name" : "ReduceMean_95", "timeMs" : 1.88992, "averageMs" : 0.00899962, "percentage" : 0.0603547 }
+, { "name" : "Sub_96", "timeMs" : 2.98992, "averageMs" : 0.0142377, "percentage" : 0.0954832 }
+, { "name" : "PWN((Unnamed Layer* 149) [Constant] + (Unnamed Layer* 150) [Shuffle], Pow_99)", "timeMs" : 1.79555, "averageMs" : 0.00855025, "percentage" : 0.057341 }
+, { "name" : "ReduceMean_100", "timeMs" : 1.45395, "averageMs" : 0.00692358, "percentage" : 0.046432 }
+, { "name" : "(Unnamed Layer* 158) [Constant] + (Unnamed Layer* 159) [Shuffle]", "timeMs" : 0.145632, "averageMs" : 0.000693486, "percentage" : 0.00465077 }
+, { "name" : "(Unnamed Layer* 161) [Constant] + (Unnamed Layer* 162) [Shuffle]", "timeMs" : 0.166784, "averageMs" : 0.00079421, "percentage" : 0.00532625 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 153) [Constant] + (Unnamed Layer* 154) [Shuffle], Add_102), Sqrt_103), Div_104), Mul_105), Add_106)", "timeMs" : 4.95923, "averageMs" : 0.0236154, "percentage" : 0.158373 }
+, { "name" : "(Unnamed Layer* 164) [Constant] + (Unnamed Layer* 165) [Shuffle]", "timeMs" : 0.128768, "averageMs" : 0.000613181, "percentage" : 0.00411221 }
+, { "name" : "MatMul_107", "timeMs" : 33.7782, "averageMs" : 0.160849, "percentage" : 1.07871 }
+, { "name" : "(Unnamed Layer* 167) [Constant] + (Unnamed Layer* 168) [Shuffle]", "timeMs" : 0.208288, "averageMs" : 0.000991848, "percentage" : 0.00665169 }
+, { "name" : "PWN(Add_108, PWN((Unnamed Layer* 178) [Constant] + (Unnamed Layer* 179) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 174) [Constant] + (Unnamed Layer* 175) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 170) [Constant] + (Unnamed Layer* 171) [Shuffle], Div_110), Erf_111), Add_113)), Mul_114), Mul_116)))", "timeMs" : 11.758, "averageMs" : 0.0559906, "percentage" : 0.375493 }
+, { "name" : "(Unnamed Layer* 181) [Constant] + (Unnamed Layer* 182) [Shuffle]", "timeMs" : 0.158304, "averageMs" : 0.000753828, "percentage" : 0.00505544 }
+, { "name" : "MatMul_117", "timeMs" : 40.2796, "averageMs" : 0.191808, "percentage" : 1.28633 }
+, { "name" : "(Unnamed Layer* 184) [Constant] + (Unnamed Layer* 185) [Shuffle]", "timeMs" : 0.162752, "averageMs" : 0.00077501, "percentage" : 0.00519749 }
+, { "name" : "PWN(Add_118, Add_119)", "timeMs" : 3.95248, "averageMs" : 0.0188213, "percentage" : 0.126223 }
+, { "name" : "ReduceMean_120", "timeMs" : 1.88998, "averageMs" : 0.00899993, "percentage" : 0.0603567 }
+, { "name" : "Sub_121", "timeMs" : 2.88899, "averageMs" : 0.0137571, "percentage" : 0.09226 }
+, { "name" : "PWN((Unnamed Layer* 191) [Constant] + (Unnamed Layer* 192) [Shuffle], Pow_124)", "timeMs" : 1.7544, "averageMs" : 0.00835429, "percentage" : 0.0560268 }
+, { "name" : "ReduceMean_125", "timeMs" : 1.38525, "averageMs" : 0.00659642, "percentage" : 0.0442379 }
+, { "name" : "(Unnamed Layer* 200) [Constant] + (Unnamed Layer* 201) [Shuffle]", "timeMs" : 0.111328, "averageMs" : 0.000530133, "percentage" : 0.00355526 }
+, { "name" : "(Unnamed Layer* 203) [Constant] + (Unnamed Layer* 204) [Shuffle]", "timeMs" : 0.125984, "averageMs" : 0.000599925, "percentage" : 0.00402331 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 195) [Constant] + (Unnamed Layer* 196) [Shuffle], Add_127), Sqrt_128), Div_129), Mul_130), Add_131)", "timeMs" : 4.58848, "averageMs" : 0.0218499, "percentage" : 0.146533 }
+, { "name" : "(Unnamed Layer* 206) [Constant] + (Unnamed Layer* 207) [Shuffle]", "timeMs" : 0.153504, "averageMs" : 0.000730971, "percentage" : 0.00490215 }
+, { "name" : "MatMul_132", "timeMs" : 29.8228, "averageMs" : 0.142013, "percentage" : 0.952391 }
+, { "name" : "Split_133_2", "timeMs" : 4.19939, "averageMs" : 0.0199971, "percentage" : 0.134108 }
+, { "name" : "Reshape_140 + Transpose_141 + Reshape_142", "timeMs" : 5.36176, "averageMs" : 0.0255322, "percentage" : 0.171228 }
+, { "name" : "Split_133", "timeMs" : 5.35686, "averageMs" : 0.0255089, "percentage" : 0.171072 }
+, { "name" : "Reshape_134 + Transpose_135 + Reshape_136", "timeMs" : 4.76061, "averageMs" : 0.0226696, "percentage" : 0.15203 }
+, { "name" : "Split_133_1", "timeMs" : 5.51962, "averageMs" : 0.0262839, "percentage" : 0.176269 }
+, { "name" : "Reshape_137 + Transpose_138 + Reshape_139 + Transpose_143", "timeMs" : 4.86259, "averageMs" : 0.0231552, "percentage" : 0.155287 }
+, { "name" : "MatMul_144", "timeMs" : 16.2805, "averageMs" : 0.0775263, "percentage" : 0.519919 }
+, { "name" : "Softmax_147", "timeMs" : 23.9173, "averageMs" : 0.113892, "percentage" : 0.763801 }
+, { "name" : "MatMul_148", "timeMs" : 18.0115, "averageMs" : 0.085769, "percentage" : 0.575197 }
+, { "name" : "Reshape_149 + Transpose_150 + Reshape_151", "timeMs" : 5.14429, "averageMs" : 0.0244966, "percentage" : 0.164283 }
+, { "name" : "(Unnamed Layer* 233) [Constant] + (Unnamed Layer* 234) [Shuffle]", "timeMs" : 0.132352, "averageMs" : 0.000630248, "percentage" : 0.00422667 }
+, { "name" : "MatMul_152", "timeMs" : 12.3538, "averageMs" : 0.0588274, "percentage" : 0.394518 }
+, { "name" : "(Unnamed Layer* 236) [Constant] + (Unnamed Layer* 237) [Shuffle]", "timeMs" : 0.164672, "averageMs" : 0.000784152, "percentage" : 0.00525881 }
+, { "name" : "PWN(Add_153, Add_154)", "timeMs" : 3.68563, "averageMs" : 0.0175506, "percentage" : 0.117701 }
+, { "name" : "ReduceMean_155", "timeMs" : 1.93805, "averageMs" : 0.0092288, "percentage" : 0.0618916 }
+, { "name" : "Sub_156", "timeMs" : 3.0736, "averageMs" : 0.0146362, "percentage" : 0.0981555 }
+, { "name" : "PWN((Unnamed Layer* 243) [Constant] + (Unnamed Layer* 244) [Shuffle], Pow_159)", "timeMs" : 1.82006, "averageMs" : 0.00866698, "percentage" : 0.0581238 }
+, { "name" : "ReduceMean_160", "timeMs" : 1.43082, "averageMs" : 0.00681341, "percentage" : 0.0456932 }
+, { "name" : "(Unnamed Layer* 252) [Constant] + (Unnamed Layer* 253) [Shuffle]", "timeMs" : 0.131424, "averageMs" : 0.000625829, "percentage" : 0.00419703 }
+, { "name" : "(Unnamed Layer* 255) [Constant] + (Unnamed Layer* 256) [Shuffle]", "timeMs" : 0.155424, "averageMs" : 0.000740114, "percentage" : 0.00496347 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 247) [Constant] + (Unnamed Layer* 248) [Shuffle], Add_162), Sqrt_163), Div_164), Mul_165), Add_166)", "timeMs" : 4.55859, "averageMs" : 0.0217076, "percentage" : 0.145579 }
+, { "name" : "(Unnamed Layer* 258) [Constant] + (Unnamed Layer* 259) [Shuffle]", "timeMs" : 0.125024, "averageMs" : 0.000595353, "percentage" : 0.00399265 }
+, { "name" : "MatMul_167", "timeMs" : 34.326, "averageMs" : 0.163457, "percentage" : 1.0962 }
+, { "name" : "(Unnamed Layer* 261) [Constant] + (Unnamed Layer* 262) [Shuffle]", "timeMs" : 0.173824, "averageMs" : 0.000827733, "percentage" : 0.00555108 }
+, { "name" : "PWN(Add_168, PWN((Unnamed Layer* 272) [Constant] + (Unnamed Layer* 273) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 268) [Constant] + (Unnamed Layer* 269) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 264) [Constant] + (Unnamed Layer* 265) [Shuffle], Div_170), Erf_171), Add_173)), Mul_174), Mul_176)))", "timeMs" : 11.7882, "averageMs" : 0.0561341, "percentage" : 0.376455 }
+, { "name" : "(Unnamed Layer* 275) [Constant] + (Unnamed Layer* 276) [Shuffle]", "timeMs" : 0.14, "averageMs" : 0.000666666, "percentage" : 0.0044709 }
+, { "name" : "MatMul_177", "timeMs" : 40.5853, "averageMs" : 0.193263, "percentage" : 1.29609 }
+, { "name" : "(Unnamed Layer* 278) [Constant] + (Unnamed Layer* 279) [Shuffle]", "timeMs" : 0.14624, "averageMs" : 0.000696381, "percentage" : 0.00467018 }
+, { "name" : "PWN(Add_178, Add_179)", "timeMs" : 3.48006, "averageMs" : 0.0165717, "percentage" : 0.111136 }
+, { "name" : "ReduceMean_180", "timeMs" : 1.7289, "averageMs" : 0.00823284, "percentage" : 0.0552123 }
+, { "name" : "Sub_181", "timeMs" : 2.64445, "averageMs" : 0.0125926, "percentage" : 0.0844505 }
+, { "name" : "PWN((Unnamed Layer* 285) [Constant] + (Unnamed Layer* 286) [Shuffle], Pow_184)", "timeMs" : 1.7817, "averageMs" : 0.00848427, "percentage" : 0.0568985 }
+, { "name" : "ReduceMean_185", "timeMs" : 1.39664, "averageMs" : 0.00665067, "percentage" : 0.0446017 }
+, { "name" : "(Unnamed Layer* 294) [Constant] + (Unnamed Layer* 295) [Shuffle]", "timeMs" : 0.108992, "averageMs" : 0.00051901, "percentage" : 0.00348067 }
+, { "name" : "(Unnamed Layer* 297) [Constant] + (Unnamed Layer* 298) [Shuffle]", "timeMs" : 0.131776, "averageMs" : 0.000627505, "percentage" : 0.00420827 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 289) [Constant] + (Unnamed Layer* 290) [Shuffle], Add_187), Sqrt_188), Div_189), Mul_190), Add_191)", "timeMs" : 4.59225, "averageMs" : 0.0218679, "percentage" : 0.146654 }
+, { "name" : "(Unnamed Layer* 300) [Constant] + (Unnamed Layer* 301) [Shuffle]", "timeMs" : 0.111008, "averageMs" : 0.00052861, "percentage" : 0.00354505 }
+, { "name" : "MatMul_192", "timeMs" : 29.672, "averageMs" : 0.141295, "percentage" : 0.947575 }
+, { "name" : "Split_193_2", "timeMs" : 4.28531, "averageMs" : 0.0204063, "percentage" : 0.136852 }
+, { "name" : "Reshape_200 + Transpose_201 + Reshape_202", "timeMs" : 5.39735, "averageMs" : 0.0257016, "percentage" : 0.172364 }
+, { "name" : "Split_193", "timeMs" : 5.31904, "averageMs" : 0.0253287, "percentage" : 0.169864 }
+, { "name" : "Reshape_194 + Transpose_195 + Reshape_196", "timeMs" : 4.67965, "averageMs" : 0.022284, "percentage" : 0.149445 }
+, { "name" : "Split_193_1", "timeMs" : 5.44912, "averageMs" : 0.0259482, "percentage" : 0.174018 }
+, { "name" : "Reshape_197 + Transpose_198 + Reshape_199 + Transpose_203", "timeMs" : 4.93296, "averageMs" : 0.0234903, "percentage" : 0.157534 }
+, { "name" : "MatMul_204", "timeMs" : 15.7655, "averageMs" : 0.0750737, "percentage" : 0.503471 }
+, { "name" : "Softmax_207", "timeMs" : 23.9527, "averageMs" : 0.114061, "percentage" : 0.764931 }
+, { "name" : "MatMul_208", "timeMs" : 17.8188, "averageMs" : 0.0848513, "percentage" : 0.569043 }
+, { "name" : "Reshape_209 + Transpose_210 + Reshape_211", "timeMs" : 5.17907, "averageMs" : 0.0246623, "percentage" : 0.165394 }
+, { "name" : "(Unnamed Layer* 327) [Constant] + (Unnamed Layer* 328) [Shuffle]", "timeMs" : 0.114592, "averageMs" : 0.000545677, "percentage" : 0.0036595 }
+, { "name" : "MatMul_212", "timeMs" : 12.3232, "averageMs" : 0.0586819, "percentage" : 0.393542 }
+, { "name" : "(Unnamed Layer* 330) [Constant] + (Unnamed Layer* 331) [Shuffle]", "timeMs" : 0.164192, "averageMs" : 0.000781867, "percentage" : 0.00524348 }
+, { "name" : "PWN(Add_213, Add_214)", "timeMs" : 4.05206, "averageMs" : 0.0192955, "percentage" : 0.129403 }
+, { "name" : "ReduceMean_215", "timeMs" : 1.90803, "averageMs" : 0.00908587, "percentage" : 0.0609331 }
+, { "name" : "Sub_216", "timeMs" : 3.00518, "averageMs" : 0.0143104, "percentage" : 0.0959706 }
+, { "name" : "PWN((Unnamed Layer* 337) [Constant] + (Unnamed Layer* 338) [Shuffle], Pow_219)", "timeMs" : 1.73885, "averageMs" : 0.00828023, "percentage" : 0.0555302 }
+, { "name" : "ReduceMean_220", "timeMs" : 1.40528, "averageMs" : 0.00669181, "percentage" : 0.0448776 }
+, { "name" : "(Unnamed Layer* 346) [Constant] + (Unnamed Layer* 347) [Shuffle]", "timeMs" : 0.126656, "averageMs" : 0.000603124, "percentage" : 0.00404477 }
+, { "name" : "(Unnamed Layer* 349) [Constant] + (Unnamed Layer* 350) [Shuffle]", "timeMs" : 0.158112, "averageMs" : 0.000752914, "percentage" : 0.00504931 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 341) [Constant] + (Unnamed Layer* 342) [Shuffle], Add_222), Sqrt_223), Div_224), Mul_225), Add_226)", "timeMs" : 6.13789, "averageMs" : 0.029228, "percentage" : 0.196014 }
+, { "name" : "(Unnamed Layer* 352) [Constant] + (Unnamed Layer* 353) [Shuffle]", "timeMs" : 0.120448, "averageMs" : 0.000573562, "percentage" : 0.00384651 }
+, { "name" : "MatMul_227", "timeMs" : 34.3207, "averageMs" : 0.163432, "percentage" : 1.09603 }
+, { "name" : "(Unnamed Layer* 355) [Constant] + (Unnamed Layer* 356) [Shuffle]", "timeMs" : 0.1792, "averageMs" : 0.000853334, "percentage" : 0.00572276 }
+, { "name" : "PWN(Add_228, PWN((Unnamed Layer* 366) [Constant] + (Unnamed Layer* 367) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 362) [Constant] + (Unnamed Layer* 363) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 358) [Constant] + (Unnamed Layer* 359) [Shuffle], Div_230), Erf_231), Add_233)), Mul_234), Mul_236)))", "timeMs" : 11.7197, "averageMs" : 0.0558082, "percentage" : 0.374269 }
+, { "name" : "(Unnamed Layer* 369) [Constant] + (Unnamed Layer* 370) [Shuffle]", "timeMs" : 0.139872, "averageMs" : 0.000666057, "percentage" : 0.00446681 }
+, { "name" : "MatMul_237", "timeMs" : 40.3674, "averageMs" : 0.192226, "percentage" : 1.28913 }
+, { "name" : "(Unnamed Layer* 372) [Constant] + (Unnamed Layer* 373) [Shuffle]", "timeMs" : 0.155328, "averageMs" : 0.000739657, "percentage" : 0.0049604 }
+, { "name" : "PWN(Add_238, Add_239)", "timeMs" : 3.96205, "averageMs" : 0.0188669, "percentage" : 0.126528 }
+, { "name" : "ReduceMean_240", "timeMs" : 1.93926, "averageMs" : 0.00923459, "percentage" : 0.0619304 }
+, { "name" : "Sub_241", "timeMs" : 2.76781, "averageMs" : 0.01318, "percentage" : 0.08839 }
+, { "name" : "PWN((Unnamed Layer* 379) [Constant] + (Unnamed Layer* 380) [Shuffle], Pow_244)", "timeMs" : 1.73539, "averageMs" : 0.00826377, "percentage" : 0.0554198 }
+, { "name" : "ReduceMean_245", "timeMs" : 1.4, "averageMs" : 0.00666667, "percentage" : 0.044709 }
+, { "name" : "(Unnamed Layer* 388) [Constant] + (Unnamed Layer* 389) [Shuffle]", "timeMs" : 0.10688, "averageMs" : 0.000508953, "percentage" : 0.00341322 }
+, { "name" : "(Unnamed Layer* 391) [Constant] + (Unnamed Layer* 392) [Shuffle]", "timeMs" : 0.143808, "averageMs" : 0.000684801, "percentage" : 0.00459252 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 383) [Constant] + (Unnamed Layer* 384) [Shuffle], Add_247), Sqrt_248), Div_249), Mul_250), Add_251)", "timeMs" : 4.54272, "averageMs" : 0.021632, "percentage" : 0.145072 }
+, { "name" : "(Unnamed Layer* 394) [Constant] + (Unnamed Layer* 395) [Shuffle]", "timeMs" : 0.145728, "averageMs" : 0.000693942, "percentage" : 0.00465382 }
+, { "name" : "MatMul_252", "timeMs" : 29.5021, "averageMs" : 0.140486, "percentage" : 0.94215 }
+, { "name" : "Split_253_2", "timeMs" : 4.1672, "averageMs" : 0.0198438, "percentage" : 0.13308 }
+, { "name" : "Reshape_260 + Transpose_261 + Reshape_262", "timeMs" : 5.38087, "averageMs" : 0.0256232, "percentage" : 0.171838 }
+, { "name" : "Split_253", "timeMs" : 7.06515, "averageMs" : 0.0336436, "percentage" : 0.225626 }
+, { "name" : "Reshape_254 + Transpose_255 + Reshape_256", "timeMs" : 4.73293, "averageMs" : 0.0225377, "percentage" : 0.151146 }
+, { "name" : "Split_253_1", "timeMs" : 5.41466, "averageMs" : 0.0257841, "percentage" : 0.172917 }
+, { "name" : "Reshape_257 + Transpose_258 + Reshape_259 + Transpose_263", "timeMs" : 4.78051, "averageMs" : 0.0227643, "percentage" : 0.152666 }
+, { "name" : "MatMul_264", "timeMs" : 15.8604, "averageMs" : 0.0755258, "percentage" : 0.506503 }
+, { "name" : "Softmax_267", "timeMs" : 23.9504, "averageMs" : 0.11405, "percentage" : 0.764857 }
+, { "name" : "MatMul_268", "timeMs" : 17.9404, "averageMs" : 0.0854306, "percentage" : 0.572928 }
+, { "name" : "Reshape_269 + Transpose_270 + Reshape_271", "timeMs" : 5.12685, "averageMs" : 0.0244136, "percentage" : 0.163726 }
+, { "name" : "(Unnamed Layer* 421) [Constant] + (Unnamed Layer* 422) [Shuffle]", "timeMs" : 0.116064, "averageMs" : 0.000552686, "percentage" : 0.00370651 }
+, { "name" : "MatMul_272", "timeMs" : 12.2093, "averageMs" : 0.0581394, "percentage" : 0.389904 }
+, { "name" : "(Unnamed Layer* 424) [Constant] + (Unnamed Layer* 425) [Shuffle]", "timeMs" : 0.169344, "averageMs" : 0.0008064, "percentage" : 0.00540801 }
+, { "name" : "PWN(Add_273, Add_274)", "timeMs" : 3.69657, "averageMs" : 0.0176027, "percentage" : 0.11805 }
+, { "name" : "ReduceMean_275", "timeMs" : 1.89805, "averageMs" : 0.00903832, "percentage" : 0.0606142 }
+, { "name" : "Sub_276", "timeMs" : 3.02759, "averageMs" : 0.0144171, "percentage" : 0.096686 }
+, { "name" : "PWN((Unnamed Layer* 431) [Constant] + (Unnamed Layer* 432) [Shuffle], Pow_279)", "timeMs" : 1.77981, "averageMs" : 0.00847528, "percentage" : 0.0568382 }
+, { "name" : "ReduceMean_280", "timeMs" : 1.40534, "averageMs" : 0.00669211, "percentage" : 0.0448797 }
+, { "name" : "(Unnamed Layer* 440) [Constant] + (Unnamed Layer* 441) [Shuffle]", "timeMs" : 0.126912, "averageMs" : 0.000604344, "percentage" : 0.00405294 }
+, { "name" : "(Unnamed Layer* 443) [Constant] + (Unnamed Layer* 444) [Shuffle]", "timeMs" : 0.158144, "averageMs" : 0.000753067, "percentage" : 0.00505033 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 435) [Constant] + (Unnamed Layer* 436) [Shuffle], Add_282), Sqrt_283), Div_284), Mul_285), Add_286)", "timeMs" : 6.11712, "averageMs" : 0.0291292, "percentage" : 0.19535 }
+, { "name" : "(Unnamed Layer* 446) [Constant] + (Unnamed Layer* 447) [Shuffle]", "timeMs" : 0.120832, "averageMs" : 0.000575391, "percentage" : 0.00385878 }
+, { "name" : "MatMul_287", "timeMs" : 34.1022, "averageMs" : 0.162391, "percentage" : 1.08906 }
+, { "name" : "(Unnamed Layer* 449) [Constant] + (Unnamed Layer* 450) [Shuffle]", "timeMs" : 0.189472, "averageMs" : 0.000902248, "percentage" : 0.0060508 }
+, { "name" : "PWN(Add_288, PWN((Unnamed Layer* 460) [Constant] + (Unnamed Layer* 461) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 456) [Constant] + (Unnamed Layer* 457) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 452) [Constant] + (Unnamed Layer* 453) [Shuffle], Div_290), Erf_291), Add_293)), Mul_294), Mul_296)))", "timeMs" : 11.728, "averageMs" : 0.0558476, "percentage" : 0.374534 }
+, { "name" : "(Unnamed Layer* 463) [Constant] + (Unnamed Layer* 464) [Shuffle]", "timeMs" : 0.137824, "averageMs" : 0.000656304, "percentage" : 0.00440141 }
+, { "name" : "MatMul_297", "timeMs" : 40.3059, "averageMs" : 0.191933, "percentage" : 1.28717 }
+, { "name" : "(Unnamed Layer* 466) [Constant] + (Unnamed Layer* 467) [Shuffle]", "timeMs" : 0.172256, "averageMs" : 0.000820267, "percentage" : 0.00550101 }
+, { "name" : "PWN(Add_298, Add_299)", "timeMs" : 3.48019, "averageMs" : 0.0165723, "percentage" : 0.11114 }
+, { "name" : "ReduceMean_300", "timeMs" : 1.87699, "averageMs" : 0.00893806, "percentage" : 0.0599418 }
+, { "name" : "Sub_301", "timeMs" : 2.79446, "averageMs" : 0.013307, "percentage" : 0.0892413 }
+, { "name" : "PWN((Unnamed Layer* 473) [Constant] + (Unnamed Layer* 474) [Shuffle], Pow_304)", "timeMs" : 1.83933, "averageMs" : 0.00875871, "percentage" : 0.058739 }
+, { "name" : "ReduceMean_305", "timeMs" : 1.37997, "averageMs" : 0.00657127, "percentage" : 0.0440693 }
+, { "name" : "(Unnamed Layer* 482) [Constant] + (Unnamed Layer* 483) [Shuffle]", "timeMs" : 0.10896, "averageMs" : 0.000518857, "percentage" : 0.00347964 }
+, { "name" : "(Unnamed Layer* 485) [Constant] + (Unnamed Layer* 486) [Shuffle]", "timeMs" : 0.12912, "averageMs" : 0.000614858, "percentage" : 0.00412345 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 477) [Constant] + (Unnamed Layer* 478) [Shuffle], Add_307), Sqrt_308), Div_309), Mul_310), Add_311)", "timeMs" : 4.43575, "averageMs" : 0.0211226, "percentage" : 0.141656 }
+, { "name" : "(Unnamed Layer* 488) [Constant] + (Unnamed Layer* 489) [Shuffle]", "timeMs" : 0.10704, "averageMs" : 0.000509715, "percentage" : 0.00341833 }
+, { "name" : "MatMul_312", "timeMs" : 29.8343, "averageMs" : 0.142068, "percentage" : 0.952761 }
+, { "name" : "Split_313_2", "timeMs" : 4.26352, "averageMs" : 0.0203025, "percentage" : 0.136156 }
+, { "name" : "Reshape_320 + Transpose_321 + Reshape_322", "timeMs" : 5.40275, "averageMs" : 0.0257274, "percentage" : 0.172537 }
+, { "name" : "Split_313", "timeMs" : 5.35533, "averageMs" : 0.0255016, "percentage" : 0.171023 }
+, { "name" : "Reshape_314 + Transpose_315 + Reshape_316", "timeMs" : 4.70646, "averageMs" : 0.0224117, "percentage" : 0.150301 }
+, { "name" : "Split_313_1", "timeMs" : 5.41331, "averageMs" : 0.0257777, "percentage" : 0.172874 }
+, { "name" : "Reshape_317 + Transpose_318 + Reshape_319 + Transpose_323", "timeMs" : 4.74726, "averageMs" : 0.022606, "percentage" : 0.151604 }
+, { "name" : "MatMul_324", "timeMs" : 15.7167, "averageMs" : 0.0748415, "percentage" : 0.501913 }
+, { "name" : "Softmax_327", "timeMs" : 24.2452, "averageMs" : 0.115453, "percentage" : 0.774272 }
+, { "name" : "MatMul_328", "timeMs" : 17.8342, "averageMs" : 0.0849248, "percentage" : 0.569536 }
+, { "name" : "Reshape_329 + Transpose_330 + Reshape_331", "timeMs" : 5.16073, "averageMs" : 0.0245749, "percentage" : 0.164808 }
+, { "name" : "(Unnamed Layer* 515) [Constant] + (Unnamed Layer* 516) [Shuffle]", "timeMs" : 0.120672, "averageMs" : 0.000574629, "percentage" : 0.00385367 }
+, { "name" : "MatMul_332", "timeMs" : 12.2285, "averageMs" : 0.058231, "percentage" : 0.390518 }
+, { "name" : "(Unnamed Layer* 518) [Constant] + (Unnamed Layer* 519) [Shuffle]", "timeMs" : 0.173088, "averageMs" : 0.000824228, "percentage" : 0.00552757 }
+, { "name" : "PWN(Add_333, Add_334)", "timeMs" : 3.56317, "averageMs" : 0.0169675, "percentage" : 0.11379 }
+, { "name" : "ReduceMean_335", "timeMs" : 1.87853, "averageMs" : 0.00894537, "percentage" : 0.0599908 }
+, { "name" : "Sub_336", "timeMs" : 3.01146, "averageMs" : 0.0143403, "percentage" : 0.0961709 }
+, { "name" : "PWN((Unnamed Layer* 525) [Constant] + (Unnamed Layer* 526) [Shuffle], Pow_339)", "timeMs" : 1.7752, "averageMs" : 0.00845333, "percentage" : 0.0566911 }
+, { "name" : "ReduceMean_340", "timeMs" : 1.39824, "averageMs" : 0.00665828, "percentage" : 0.0446528 }
+, { "name" : "(Unnamed Layer* 534) [Constant] + (Unnamed Layer* 535) [Shuffle]", "timeMs" : 0.1168, "averageMs" : 0.000556191, "percentage" : 0.00373002 }
+, { "name" : "(Unnamed Layer* 537) [Constant] + (Unnamed Layer* 538) [Shuffle]", "timeMs" : 0.144832, "averageMs" : 0.000689677, "percentage" : 0.00462522 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 529) [Constant] + (Unnamed Layer* 530) [Shuffle], Add_342), Sqrt_343), Div_344), Mul_345), Add_346)", "timeMs" : 4.49526, "averageMs" : 0.021406, "percentage" : 0.143556 }
+, { "name" : "(Unnamed Layer* 540) [Constant] + (Unnamed Layer* 541) [Shuffle]", "timeMs" : 0.11152, "averageMs" : 0.000531048, "percentage" : 0.0035614 }
+, { "name" : "MatMul_347", "timeMs" : 34.5513, "averageMs" : 0.16453, "percentage" : 1.1034 }
+, { "name" : "(Unnamed Layer* 543) [Constant] + (Unnamed Layer* 544) [Shuffle]", "timeMs" : 0.192128, "averageMs" : 0.000914896, "percentage" : 0.00613562 }
+, { "name" : "PWN(Add_348, PWN((Unnamed Layer* 554) [Constant] + (Unnamed Layer* 555) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 550) [Constant] + (Unnamed Layer* 551) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 546) [Constant] + (Unnamed Layer* 547) [Shuffle], Div_350), Erf_351), Add_353)), Mul_354), Mul_356)))", "timeMs" : 11.7337, "averageMs" : 0.0558749, "percentage" : 0.374717 }
+, { "name" : "(Unnamed Layer* 557) [Constant] + (Unnamed Layer* 558) [Shuffle]", "timeMs" : 0.146432, "averageMs" : 0.000697295, "percentage" : 0.00467631 }
+, { "name" : "MatMul_357", "timeMs" : 40.447, "averageMs" : 0.192605, "percentage" : 1.29168 }
+, { "name" : "(Unnamed Layer* 560) [Constant] + (Unnamed Layer* 561) [Shuffle]", "timeMs" : 0.163488, "averageMs" : 0.000778514, "percentage" : 0.00522099 }
+, { "name" : "PWN(Add_358, Add_359)", "timeMs" : 3.61133, "averageMs" : 0.0171968, "percentage" : 0.115328 }
+, { "name" : "ReduceMean_360", "timeMs" : 1.84822, "averageMs" : 0.00880107, "percentage" : 0.0590231 }
+, { "name" : "Sub_361", "timeMs" : 2.96349, "averageMs" : 0.0141119, "percentage" : 0.0946391 }
+, { "name" : "PWN((Unnamed Layer* 567) [Constant] + (Unnamed Layer* 568) [Shuffle], Pow_364)", "timeMs" : 1.77568, "averageMs" : 0.00845562, "percentage" : 0.0567064 }
+, { "name" : "ReduceMean_365", "timeMs" : 1.40451, "averageMs" : 0.00668815, "percentage" : 0.0448531 }
+, { "name" : "(Unnamed Layer* 576) [Constant] + (Unnamed Layer* 577) [Shuffle]", "timeMs" : 0.108768, "averageMs" : 0.000517943, "percentage" : 0.00347351 }
+, { "name" : "(Unnamed Layer* 579) [Constant] + (Unnamed Layer* 580) [Shuffle]", "timeMs" : 0.125696, "averageMs" : 0.000598553, "percentage" : 0.00401411 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 571) [Constant] + (Unnamed Layer* 572) [Shuffle], Add_367), Sqrt_368), Div_369), Mul_370), Add_371)", "timeMs" : 4.62054, "averageMs" : 0.0220026, "percentage" : 0.147557 }
+, { "name" : "(Unnamed Layer* 582) [Constant] + (Unnamed Layer* 583) [Shuffle]", "timeMs" : 0.144064, "averageMs" : 0.000686018, "percentage" : 0.00460068 }
+, { "name" : "MatMul_372", "timeMs" : 29.523, "averageMs" : 0.140586, "percentage" : 0.942819 }
+, { "name" : "Split_373_2", "timeMs" : 4.196, "averageMs" : 0.019981, "percentage" : 0.133999 }
+, { "name" : "Reshape_380 + Transpose_381 + Reshape_382", "timeMs" : 5.39434, "averageMs" : 0.0256873, "percentage" : 0.172268 }
+, { "name" : "Split_373", "timeMs" : 5.35414, "averageMs" : 0.0254959, "percentage" : 0.170985 }
+, { "name" : "Reshape_374 + Transpose_375 + Reshape_376", "timeMs" : 4.71827, "averageMs" : 0.022468, "percentage" : 0.150678 }
+, { "name" : "Split_373_1", "timeMs" : 5.44538, "averageMs" : 0.0259304, "percentage" : 0.173898 }
+, { "name" : "Reshape_377 + Transpose_378 + Reshape_379 + Transpose_383", "timeMs" : 4.77738, "averageMs" : 0.0227494, "percentage" : 0.152566 }
+, { "name" : "MatMul_384", "timeMs" : 15.6233, "averageMs" : 0.0743968, "percentage" : 0.498931 }
+, { "name" : "Softmax_387", "timeMs" : 23.9619, "averageMs" : 0.114104, "percentage" : 0.765223 }
+, { "name" : "MatMul_388", "timeMs" : 17.7272, "averageMs" : 0.0844151, "percentage" : 0.566118 }
+, { "name" : "Reshape_389 + Transpose_390 + Reshape_391", "timeMs" : 5.16176, "averageMs" : 0.0245798, "percentage" : 0.164841 }
+, { "name" : "(Unnamed Layer* 609) [Constant] + (Unnamed Layer* 610) [Shuffle]", "timeMs" : 0.120832, "averageMs" : 0.000575391, "percentage" : 0.00385878 }
+, { "name" : "MatMul_392", "timeMs" : 12.2251, "averageMs" : 0.0582147, "percentage" : 0.390409 }
+, { "name" : "(Unnamed Layer* 612) [Constant] + (Unnamed Layer* 613) [Shuffle]", "timeMs" : 0.156512, "averageMs" : 0.000745295, "percentage" : 0.00499821 }
+, { "name" : "PWN(Add_393, Add_394)", "timeMs" : 3.52457, "averageMs" : 0.0167837, "percentage" : 0.112557 }
+, { "name" : "ReduceMean_395", "timeMs" : 1.90346, "averageMs" : 0.00906408, "percentage" : 0.0607869 }
+, { "name" : "Sub_396", "timeMs" : 3.02483, "averageMs" : 0.014404, "percentage" : 0.0965981 }
+, { "name" : "PWN((Unnamed Layer* 619) [Constant] + (Unnamed Layer* 620) [Shuffle], Pow_399)", "timeMs" : 1.7584, "averageMs" : 0.00837333, "percentage" : 0.0561546 }
+, { "name" : "ReduceMean_400", "timeMs" : 1.41274, "averageMs" : 0.00672731, "percentage" : 0.0451158 }
+, { "name" : "(Unnamed Layer* 628) [Constant] + (Unnamed Layer* 629) [Shuffle]", "timeMs" : 0.143488, "averageMs" : 0.000683277, "percentage" : 0.0045823 }
+, { "name" : "(Unnamed Layer* 631) [Constant] + (Unnamed Layer* 632) [Shuffle]", "timeMs" : 0.161472, "averageMs" : 0.000768914, "percentage" : 0.00515661 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 623) [Constant] + (Unnamed Layer* 624) [Shuffle], Add_402), Sqrt_403), Div_404), Mul_405), Add_406)", "timeMs" : 4.5849, "averageMs" : 0.0218328, "percentage" : 0.146419 }
+, { "name" : "(Unnamed Layer* 634) [Constant] + (Unnamed Layer* 635) [Shuffle]", "timeMs" : 0.115648, "averageMs" : 0.000550705, "percentage" : 0.00369323 }
+, { "name" : "MatMul_407", "timeMs" : 34.772, "averageMs" : 0.165581, "percentage" : 1.11044 }
+, { "name" : "(Unnamed Layer* 637) [Constant] + (Unnamed Layer* 638) [Shuffle]", "timeMs" : 0.171264, "averageMs" : 0.000815543, "percentage" : 0.00546932 }
+, { "name" : "PWN(Add_408, PWN((Unnamed Layer* 648) [Constant] + (Unnamed Layer* 649) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 644) [Constant] + (Unnamed Layer* 645) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 640) [Constant] + (Unnamed Layer* 641) [Shuffle], Div_410), Erf_411), Add_413)), Mul_414), Mul_416)))", "timeMs" : 11.7647, "averageMs" : 0.0560226, "percentage" : 0.375707 }
+, { "name" : "(Unnamed Layer* 651) [Constant] + (Unnamed Layer* 652) [Shuffle]", "timeMs" : 0.133216, "averageMs" : 0.000634361, "percentage" : 0.00425425 }
+, { "name" : "MatMul_417", "timeMs" : 40.3968, "averageMs" : 0.192366, "percentage" : 1.29007 }
+, { "name" : "(Unnamed Layer* 654) [Constant] + (Unnamed Layer* 655) [Shuffle]", "timeMs" : 0.159456, "averageMs" : 0.000759314, "percentage" : 0.00509223 }
+, { "name" : "PWN(Add_418, Add_419)", "timeMs" : 3.46102, "averageMs" : 0.0164811, "percentage" : 0.110528 }
+, { "name" : "ReduceMean_420", "timeMs" : 1.70864, "averageMs" : 0.00813638, "percentage" : 0.0545655 }
+, { "name" : "Sub_421", "timeMs" : 2.64342, "averageMs" : 0.0125877, "percentage" : 0.0844178 }
+, { "name" : "PWN((Unnamed Layer* 661) [Constant] + (Unnamed Layer* 662) [Shuffle], Pow_424)", "timeMs" : 1.85354, "averageMs" : 0.00882636, "percentage" : 0.0591927 }
+, { "name" : "ReduceMean_425", "timeMs" : 1.48509, "averageMs" : 0.00707185, "percentage" : 0.0474263 }
+, { "name" : "(Unnamed Layer* 670) [Constant] + (Unnamed Layer* 671) [Shuffle]", "timeMs" : 0.10784, "averageMs" : 0.000513524, "percentage" : 0.00344388 }
+, { "name" : "(Unnamed Layer* 673) [Constant] + (Unnamed Layer* 674) [Shuffle]", "timeMs" : 0.117984, "averageMs" : 0.000561829, "percentage" : 0.00376783 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 665) [Constant] + (Unnamed Layer* 666) [Shuffle], Add_427), Sqrt_428), Div_429), Mul_430), Add_431)", "timeMs" : 4.41779, "averageMs" : 0.0210371, "percentage" : 0.141082 }
+, { "name" : "(Unnamed Layer* 676) [Constant] + (Unnamed Layer* 677) [Shuffle]", "timeMs" : 0.106048, "averageMs" : 0.000504991, "percentage" : 0.00338665 }
+, { "name" : "MatMul_432", "timeMs" : 29.7265, "averageMs" : 0.141555, "percentage" : 0.949317 }
+, { "name" : "Split_433_2", "timeMs" : 4.2663, "averageMs" : 0.0203157, "percentage" : 0.136245 }
+, { "name" : "Reshape_440 + Transpose_441 + Reshape_442", "timeMs" : 5.39939, "averageMs" : 0.0257114, "percentage" : 0.17243 }
+, { "name" : "Split_433", "timeMs" : 5.36422, "averageMs" : 0.0255439, "percentage" : 0.171307 }
+, { "name" : "Reshape_434 + Transpose_435 + Reshape_436", "timeMs" : 4.67821, "averageMs" : 0.0222772, "percentage" : 0.149399 }
+, { "name" : "Split_433_1", "timeMs" : 5.38339, "averageMs" : 0.0256352, "percentage" : 0.171919 }
+, { "name" : "Reshape_437 + Transpose_438 + Reshape_439 + Transpose_443", "timeMs" : 4.76272, "averageMs" : 0.0226796, "percentage" : 0.152098 }
+, { "name" : "MatMul_444", "timeMs" : 15.7835, "averageMs" : 0.0751595, "percentage" : 0.504046 }
+, { "name" : "Softmax_447", "timeMs" : 23.9428, "averageMs" : 0.114013, "percentage" : 0.764614 }
+, { "name" : "MatMul_448", "timeMs" : 17.8034, "averageMs" : 0.0847783, "percentage" : 0.568554 }
+, { "name" : "Reshape_449 + Transpose_450 + Reshape_451", "timeMs" : 5.1776, "averageMs" : 0.0246552, "percentage" : 0.165347 }
+, { "name" : "(Unnamed Layer* 703) [Constant] + (Unnamed Layer* 704) [Shuffle]", "timeMs" : 0.108512, "averageMs" : 0.000516724, "percentage" : 0.00346534 }
+, { "name" : "MatMul_452", "timeMs" : 12.1481, "averageMs" : 0.0578482, "percentage" : 0.387951 }
+, { "name" : "(Unnamed Layer* 706) [Constant] + (Unnamed Layer* 707) [Shuffle]", "timeMs" : 0.15712, "averageMs" : 0.00074819, "percentage" : 0.00501763 }
+, { "name" : "PWN(Add_453, Add_454)", "timeMs" : 3.68422, "averageMs" : 0.0175439, "percentage" : 0.117656 }
+, { "name" : "ReduceMean_455", "timeMs" : 1.92336, "averageMs" : 0.00915886, "percentage" : 0.0614226 }
+, { "name" : "Sub_456", "timeMs" : 3.04531, "averageMs" : 0.0145015, "percentage" : 0.0972521 }
+, { "name" : "PWN((Unnamed Layer* 713) [Constant] + (Unnamed Layer* 714) [Shuffle], Pow_459)", "timeMs" : 1.74835, "averageMs" : 0.00832549, "percentage" : 0.0558337 }
+, { "name" : "ReduceMean_460", "timeMs" : 1.40877, "averageMs" : 0.00670842, "percentage" : 0.0449891 }
+, { "name" : "(Unnamed Layer* 722) [Constant] + (Unnamed Layer* 723) [Shuffle]", "timeMs" : 0.12048, "averageMs" : 0.000573715, "percentage" : 0.00384754 }
+, { "name" : "(Unnamed Layer* 725) [Constant] + (Unnamed Layer* 726) [Shuffle]", "timeMs" : 0.166464, "averageMs" : 0.000792686, "percentage" : 0.00531603 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 717) [Constant] + (Unnamed Layer* 718) [Shuffle], Add_462), Sqrt_463), Div_464), Mul_465), Add_466)", "timeMs" : 4.69258, "averageMs" : 0.0223456, "percentage" : 0.149858 }
+, { "name" : "(Unnamed Layer* 728) [Constant] + (Unnamed Layer* 729) [Shuffle]", "timeMs" : 0.12128, "averageMs" : 0.000577524, "percentage" : 0.00387308 }
+, { "name" : "MatMul_467", "timeMs" : 34.476, "averageMs" : 0.164172, "percentage" : 1.10099 }
+, { "name" : "(Unnamed Layer* 731) [Constant] + (Unnamed Layer* 732) [Shuffle]", "timeMs" : 0.16848, "averageMs" : 0.000802286, "percentage" : 0.00538041 }
+, { "name" : "PWN(Add_468, PWN((Unnamed Layer* 742) [Constant] + (Unnamed Layer* 743) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 738) [Constant] + (Unnamed Layer* 739) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 734) [Constant] + (Unnamed Layer* 735) [Shuffle], Div_470), Erf_471), Add_473)), Mul_474), Mul_476)))", "timeMs" : 11.8223, "averageMs" : 0.0562968, "percentage" : 0.377547 }
+, { "name" : "(Unnamed Layer* 745) [Constant] + (Unnamed Layer* 746) [Shuffle]", "timeMs" : 0.141152, "averageMs" : 0.000672152, "percentage" : 0.00450769 }
+, { "name" : "MatMul_477", "timeMs" : 41.1758, "averageMs" : 0.196075, "percentage" : 1.31495 }
+, { "name" : "(Unnamed Layer* 748) [Constant] + (Unnamed Layer* 749) [Shuffle]", "timeMs" : 0.164352, "averageMs" : 0.000782629, "percentage" : 0.00524859 }
+, { "name" : "PWN(Add_478, Add_479)", "timeMs" : 3.92755, "averageMs" : 0.0187026, "percentage" : 0.125426 }
+, { "name" : "ReduceMean_480", "timeMs" : 1.82112, "averageMs" : 0.008672, "percentage" : 0.0581575 }
+, { "name" : "Sub_481", "timeMs" : 2.73766, "averageMs" : 0.0130365, "percentage" : 0.0874274 }
+, { "name" : "PWN((Unnamed Layer* 755) [Constant] + (Unnamed Layer* 756) [Shuffle], Pow_484)", "timeMs" : 1.77507, "averageMs" : 0.00845273, "percentage" : 0.056687 }
+, { "name" : "ReduceMean_485", "timeMs" : 1.42528, "averageMs" : 0.00678705, "percentage" : 0.0455164 }
+, { "name" : "(Unnamed Layer* 764) [Constant] + (Unnamed Layer* 765) [Shuffle]", "timeMs" : 0.106208, "averageMs" : 0.000505753, "percentage" : 0.00339176 }
+, { "name" : "(Unnamed Layer* 767) [Constant] + (Unnamed Layer* 768) [Shuffle]", "timeMs" : 0.139488, "averageMs" : 0.000664228, "percentage" : 0.00445455 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 759) [Constant] + (Unnamed Layer* 760) [Shuffle], Add_487), Sqrt_488), Div_489), Mul_490), Add_491)", "timeMs" : 4.39741, "averageMs" : 0.02094, "percentage" : 0.140431 }
+, { "name" : "(Unnamed Layer* 770) [Constant] + (Unnamed Layer* 771) [Shuffle]", "timeMs" : 0.107968, "averageMs" : 0.000514134, "percentage" : 0.00344796 }
+, { "name" : "MatMul_492", "timeMs" : 29.3682, "averageMs" : 0.139849, "percentage" : 0.937874 }
+, { "name" : "Split_493_2", "timeMs" : 4.14886, "averageMs" : 0.0197565, "percentage" : 0.132494 }
+, { "name" : "Reshape_500 + Transpose_501 + Reshape_502", "timeMs" : 5.35833, "averageMs" : 0.0255159, "percentage" : 0.171119 }
+, { "name" : "Split_493", "timeMs" : 5.36832, "averageMs" : 0.0255634, "percentage" : 0.171437 }
+, { "name" : "Reshape_494 + Transpose_495 + Reshape_496", "timeMs" : 4.69651, "averageMs" : 0.0223643, "percentage" : 0.149983 }
+, { "name" : "Split_493_1", "timeMs" : 5.63917, "averageMs" : 0.0268532, "percentage" : 0.180087 }
+, { "name" : "Reshape_497 + Transpose_498 + Reshape_499 + Transpose_503", "timeMs" : 4.75638, "averageMs" : 0.0226494, "percentage" : 0.151895 }
+, { "name" : "MatMul_504", "timeMs" : 15.8534, "averageMs" : 0.0754925, "percentage" : 0.50628 }
+, { "name" : "Softmax_507", "timeMs" : 23.9564, "averageMs" : 0.114078, "percentage" : 0.76505 }
+, { "name" : "MatMul_508", "timeMs" : 17.9337, "averageMs" : 0.0853984, "percentage" : 0.572712 }
+, { "name" : "Reshape_509 + Transpose_510 + Reshape_511", "timeMs" : 5.15699, "averageMs" : 0.0245571, "percentage" : 0.164689 }
+, { "name" : "(Unnamed Layer* 797) [Constant] + (Unnamed Layer* 798) [Shuffle]", "timeMs" : 0.114304, "averageMs" : 0.000544305, "percentage" : 0.00365031 }
+, { "name" : "MatMul_512", "timeMs" : 12.2118, "averageMs" : 0.0581513, "percentage" : 0.389983 }
+, { "name" : "(Unnamed Layer* 800) [Constant] + (Unnamed Layer* 801) [Shuffle]", "timeMs" : 0.163712, "averageMs" : 0.000779581, "percentage" : 0.00522815 }
+, { "name" : "PWN(Add_513, Add_514)", "timeMs" : 3.73539, "averageMs" : 0.0177876, "percentage" : 0.11929 }
+, { "name" : "ReduceMean_515", "timeMs" : 1.9473, "averageMs" : 0.00927284, "percentage" : 0.062187 }
+, { "name" : "Sub_516", "timeMs" : 3.06435, "averageMs" : 0.0145921, "percentage" : 0.0978601 }
+, { "name" : "PWN((Unnamed Layer* 807) [Constant] + (Unnamed Layer* 808) [Shuffle], Pow_519)", "timeMs" : 1.78512, "averageMs" : 0.00850057, "percentage" : 0.0570079 }
+, { "name" : "ReduceMean_520", "timeMs" : 1.40778, "averageMs" : 0.0067037, "percentage" : 0.0449574 }
+, { "name" : "(Unnamed Layer* 816) [Constant] + (Unnamed Layer* 817) [Shuffle]", "timeMs" : 0.115392, "averageMs" : 0.000549486, "percentage" : 0.00368505 }
+, { "name" : "(Unnamed Layer* 819) [Constant] + (Unnamed Layer* 820) [Shuffle]", "timeMs" : 0.151232, "averageMs" : 0.000720153, "percentage" : 0.0048296 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 811) [Constant] + (Unnamed Layer* 812) [Shuffle], Add_522), Sqrt_523), Div_524), Mul_525), Add_526)", "timeMs" : 4.57834, "averageMs" : 0.0218016, "percentage" : 0.146209 }
+, { "name" : "(Unnamed Layer* 822) [Constant] + (Unnamed Layer* 823) [Shuffle]", "timeMs" : 0.119936, "averageMs" : 0.000571123, "percentage" : 0.00383016 }
+, { "name" : "MatMul_527", "timeMs" : 34.3384, "averageMs" : 0.163516, "percentage" : 1.0966 }
+, { "name" : "(Unnamed Layer* 825) [Constant] + (Unnamed Layer* 826) [Shuffle]", "timeMs" : 0.178976, "averageMs" : 0.000852267, "percentage" : 0.0057156 }
+, { "name" : "PWN(Add_528, PWN((Unnamed Layer* 836) [Constant] + (Unnamed Layer* 837) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 832) [Constant] + (Unnamed Layer* 833) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 828) [Constant] + (Unnamed Layer* 829) [Shuffle], Div_530), Erf_531), Add_533)), Mul_534), Mul_536)))", "timeMs" : 11.7173, "averageMs" : 0.0557969, "percentage" : 0.374194 }
+, { "name" : "(Unnamed Layer* 839) [Constant] + (Unnamed Layer* 840) [Shuffle]", "timeMs" : 0.136384, "averageMs" : 0.000649447, "percentage" : 0.00435542 }
+, { "name" : "MatMul_537", "timeMs" : 40.5235, "averageMs" : 0.192969, "percentage" : 1.29412 }
+, { "name" : "(Unnamed Layer* 842) [Constant] + (Unnamed Layer* 843) [Shuffle]", "timeMs" : 0.171648, "averageMs" : 0.000817372, "percentage" : 0.00548159 }
+, { "name" : "PWN(Add_538, Add_539)", "timeMs" : 3.50086, "averageMs" : 0.0166708, "percentage" : 0.1118 }
+, { "name" : "ReduceMean_540", "timeMs" : 1.7385, "averageMs" : 0.00827856, "percentage" : 0.055519 }
+, { "name" : "Sub_541", "timeMs" : 2.73382, "averageMs" : 0.0130182, "percentage" : 0.0873047 }
+, { "name" : "PWN((Unnamed Layer* 849) [Constant] + (Unnamed Layer* 850) [Shuffle], Pow_544)", "timeMs" : 1.70269, "averageMs" : 0.00810804, "percentage" : 0.0543754 }
+, { "name" : "ReduceMean_545", "timeMs" : 1.38288, "averageMs" : 0.00658514, "percentage" : 0.0441623 }
+, { "name" : "(Unnamed Layer* 858) [Constant] + (Unnamed Layer* 859) [Shuffle]", "timeMs" : 0.113024, "averageMs" : 0.000538209, "percentage" : 0.00360942 }
+, { "name" : "(Unnamed Layer* 861) [Constant] + (Unnamed Layer* 862) [Shuffle]", "timeMs" : 0.124064, "averageMs" : 0.000590781, "percentage" : 0.00396199 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 853) [Constant] + (Unnamed Layer* 854) [Shuffle], Add_547), Sqrt_548), Div_549), Mul_550), Add_551)", "timeMs" : 4.41853, "averageMs" : 0.0210406, "percentage" : 0.141106 }
+, { "name" : "(Unnamed Layer* 864) [Constant] + (Unnamed Layer* 865) [Shuffle]", "timeMs" : 0.107296, "averageMs" : 0.000510934, "percentage" : 0.00342651 }
+, { "name" : "MatMul_552", "timeMs" : 29.6662, "averageMs" : 0.141268, "percentage" : 0.94739 }
+, { "name" : "Split_553_2", "timeMs" : 4.27107, "averageMs" : 0.0203384, "percentage" : 0.136397 }
+, { "name" : "Reshape_560 + Transpose_561 + Reshape_562", "timeMs" : 5.40765, "averageMs" : 0.0257507, "percentage" : 0.172693 }
+, { "name" : "Split_553", "timeMs" : 5.36525, "averageMs" : 0.0255488, "percentage" : 0.171339 }
+, { "name" : "Reshape_554 + Transpose_555 + Reshape_556", "timeMs" : 4.70813, "averageMs" : 0.0224197, "percentage" : 0.150354 }
+, { "name" : "Split_553_1", "timeMs" : 5.47056, "averageMs" : 0.0260503, "percentage" : 0.174703 }
+, { "name" : "Reshape_557 + Transpose_558 + Reshape_559 + Transpose_563", "timeMs" : 4.77917, "averageMs" : 0.0227579, "percentage" : 0.152623 }
+, { "name" : "MatMul_564", "timeMs" : 15.6259, "averageMs" : 0.074409, "percentage" : 0.499013 }
+, { "name" : "Softmax_567", "timeMs" : 23.9809, "averageMs" : 0.114195, "percentage" : 0.765832 }
+, { "name" : "MatMul_568", "timeMs" : 17.7122, "averageMs" : 0.0843436, "percentage" : 0.565638 }
+, { "name" : "Reshape_569 + Transpose_570 + Reshape_571", "timeMs" : 5.17197, "averageMs" : 0.0246284, "percentage" : 0.165167 }
+, { "name" : "(Unnamed Layer* 891) [Constant] + (Unnamed Layer* 892) [Shuffle]", "timeMs" : 0.109696, "averageMs" : 0.000522362, "percentage" : 0.00350315 }
+, { "name" : "MatMul_572", "timeMs" : 12.2453, "averageMs" : 0.0583112, "percentage" : 0.391055 }
+, { "name" : "(Unnamed Layer* 894) [Constant] + (Unnamed Layer* 895) [Shuffle]", "timeMs" : 0.164, "averageMs" : 0.000780952, "percentage" : 0.00523734 }
+, { "name" : "PWN(Add_573, Add_574)", "timeMs" : 3.51661, "averageMs" : 0.0167457, "percentage" : 0.112303 }
+, { "name" : "ReduceMean_575", "timeMs" : 1.90426, "averageMs" : 0.00906789, "percentage" : 0.0608125 }
+, { "name" : "Sub_576", "timeMs" : 3.00368, "averageMs" : 0.0143032, "percentage" : 0.0959226 }
+, { "name" : "PWN((Unnamed Layer* 901) [Constant] + (Unnamed Layer* 902) [Shuffle], Pow_579)", "timeMs" : 1.77805, "averageMs" : 0.00846689, "percentage" : 0.056782 }
+, { "name" : "ReduceMean_580", "timeMs" : 1.3977, "averageMs" : 0.00665569, "percentage" : 0.0446355 }
+, { "name" : "(Unnamed Layer* 910) [Constant] + (Unnamed Layer* 911) [Shuffle]", "timeMs" : 0.134048, "averageMs" : 0.000638324, "percentage" : 0.00428083 }
+, { "name" : "(Unnamed Layer* 913) [Constant] + (Unnamed Layer* 914) [Shuffle]", "timeMs" : 0.167968, "averageMs" : 0.000799847, "percentage" : 0.00536406 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 905) [Constant] + (Unnamed Layer* 906) [Shuffle], Add_582), Sqrt_583), Div_584), Mul_585), Add_586)", "timeMs" : 4.76147, "averageMs" : 0.0226737, "percentage" : 0.152058 }
+, { "name" : "(Unnamed Layer* 916) [Constant] + (Unnamed Layer* 917) [Shuffle]", "timeMs" : 0.120576, "averageMs" : 0.000574172, "percentage" : 0.0038506 }
+, { "name" : "MatMul_587", "timeMs" : 34.4179, "averageMs" : 0.163895, "percentage" : 1.09914 }
+, { "name" : "(Unnamed Layer* 919) [Constant] + (Unnamed Layer* 920) [Shuffle]", "timeMs" : 0.177888, "averageMs" : 0.000847086, "percentage" : 0.00568086 }
+, { "name" : "PWN(Add_588, PWN((Unnamed Layer* 930) [Constant] + (Unnamed Layer* 931) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 926) [Constant] + (Unnamed Layer* 927) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 922) [Constant] + (Unnamed Layer* 923) [Shuffle], Div_590), Erf_591), Add_593)), Mul_594), Mul_596)))", "timeMs" : 11.7457, "averageMs" : 0.0559317, "percentage" : 0.375098 }
+, { "name" : "(Unnamed Layer* 933) [Constant] + (Unnamed Layer* 934) [Shuffle]", "timeMs" : 0.13856, "averageMs" : 0.000659809, "percentage" : 0.00442491 }
+, { "name" : "MatMul_597", "timeMs" : 40.9961, "averageMs" : 0.19522, "percentage" : 1.30921 }
+, { "name" : "(Unnamed Layer* 936) [Constant] + (Unnamed Layer* 937) [Shuffle]", "timeMs" : 0.172096, "averageMs" : 0.000819505, "percentage" : 0.0054959 }
+, { "name" : "PWN(Add_598, Add_599)", "timeMs" : 3.44854, "averageMs" : 0.0164216, "percentage" : 0.110129 }
+, { "name" : "ReduceMean_600", "timeMs" : 1.93706, "averageMs" : 0.00922408, "percentage" : 0.0618599 }
+, { "name" : "Sub_601", "timeMs" : 2.86816, "averageMs" : 0.0136579, "percentage" : 0.0915948 }
+, { "name" : "PWN((Unnamed Layer* 943) [Constant] + (Unnamed Layer* 944) [Shuffle], Pow_604)", "timeMs" : 1.74032, "averageMs" : 0.00828724, "percentage" : 0.0555772 }
+, { "name" : "ReduceMean_605", "timeMs" : 1.39773, "averageMs" : 0.00665585, "percentage" : 0.0446365 }
+, { "name" : "(Unnamed Layer* 952) [Constant] + (Unnamed Layer* 953) [Shuffle]", "timeMs" : 0.114912, "averageMs" : 0.0005472, "percentage" : 0.00366972 }
+, { "name" : "(Unnamed Layer* 955) [Constant] + (Unnamed Layer* 956) [Shuffle]", "timeMs" : 0.117856, "averageMs" : 0.00056122, "percentage" : 0.00376374 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 947) [Constant] + (Unnamed Layer* 948) [Shuffle], Add_607), Sqrt_608), Div_609), Mul_610), Add_611)", "timeMs" : 4.52704, "averageMs" : 0.0215573, "percentage" : 0.144571 }
+, { "name" : "(Unnamed Layer* 958) [Constant] + (Unnamed Layer* 959) [Shuffle]", "timeMs" : 0.11392, "averageMs" : 0.000542477, "percentage" : 0.00363804 }
+, { "name" : "MatMul_612", "timeMs" : 29.5892, "averageMs" : 0.140901, "percentage" : 0.944933 }
+, { "name" : "Split_613_2", "timeMs" : 4.25706, "averageMs" : 0.0202717, "percentage" : 0.135949 }
+, { "name" : "Reshape_620 + Transpose_621 + Reshape_622", "timeMs" : 5.39037, "averageMs" : 0.0256684, "percentage" : 0.172142 }
+, { "name" : "Split_613", "timeMs" : 5.33075, "averageMs" : 0.0253845, "percentage" : 0.170238 }
+, { "name" : "Reshape_614 + Transpose_615 + Reshape_616", "timeMs" : 4.70026, "averageMs" : 0.0223822, "percentage" : 0.150103 }
+, { "name" : "Split_613_1", "timeMs" : 5.5897, "averageMs" : 0.0266176, "percentage" : 0.178507 }
+, { "name" : "Reshape_617 + Transpose_618 + Reshape_619 + Transpose_623", "timeMs" : 4.83824, "averageMs" : 0.0230392, "percentage" : 0.154509 }
+, { "name" : "MatMul_624", "timeMs" : 15.7531, "averageMs" : 0.0750146, "percentage" : 0.503074 }
+, { "name" : "Softmax_627", "timeMs" : 23.9581, "averageMs" : 0.114086, "percentage" : 0.765104 }
+, { "name" : "MatMul_628", "timeMs" : 17.8847, "averageMs" : 0.0851651, "percentage" : 0.571148 }
+, { "name" : "Reshape_629 + Transpose_630 + Reshape_631", "timeMs" : 5.14109, "averageMs" : 0.0244814, "percentage" : 0.164181 }
+, { "name" : "(Unnamed Layer* 985) [Constant] + (Unnamed Layer* 986) [Shuffle]", "timeMs" : 0.112832, "averageMs" : 0.000537296, "percentage" : 0.0036033 }
+, { "name" : "MatMul_632", "timeMs" : 12.1328, "averageMs" : 0.0577754, "percentage" : 0.387462 }
+, { "name" : "(Unnamed Layer* 988) [Constant] + (Unnamed Layer* 989) [Shuffle]", "timeMs" : 0.145664, "averageMs" : 0.000693638, "percentage" : 0.00465178 }
+, { "name" : "PWN(Add_633, Add_634)", "timeMs" : 3.52698, "averageMs" : 0.0167951, "percentage" : 0.112634 }
+, { "name" : "ReduceMean_635", "timeMs" : 1.92819, "averageMs" : 0.00918187, "percentage" : 0.0615769 }
+, { "name" : "Sub_636", "timeMs" : 3.01062, "averageMs" : 0.0143363, "percentage" : 0.0961444 }
+, { "name" : "PWN((Unnamed Layer* 995) [Constant] + (Unnamed Layer* 996) [Shuffle], Pow_639)", "timeMs" : 1.78262, "averageMs" : 0.00848869, "percentage" : 0.0569282 }
+, { "name" : "ReduceMean_640", "timeMs" : 1.43222, "averageMs" : 0.00682011, "percentage" : 0.0457381 }
+, { "name" : "(Unnamed Layer* 1004) [Constant] + (Unnamed Layer* 1005) [Shuffle]", "timeMs" : 0.115712, "averageMs" : 0.00055101, "percentage" : 0.00369527 }
+, { "name" : "(Unnamed Layer* 1007) [Constant] + (Unnamed Layer* 1008) [Shuffle]", "timeMs" : 0.132224, "averageMs" : 0.000629638, "percentage" : 0.00422258 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 999) [Constant] + (Unnamed Layer* 1000) [Shuffle], Add_642), Sqrt_643), Div_644), Mul_645), Add_646)", "timeMs" : 4.74016, "averageMs" : 0.0225722, "percentage" : 0.151377 }
+, { "name" : "(Unnamed Layer* 1010) [Constant] + (Unnamed Layer* 1011) [Shuffle]", "timeMs" : 0.113696, "averageMs" : 0.00054141, "percentage" : 0.00363089 }
+, { "name" : "MatMul_647", "timeMs" : 34.0726, "averageMs" : 0.162251, "percentage" : 1.08811 }
+, { "name" : "(Unnamed Layer* 1013) [Constant] + (Unnamed Layer* 1014) [Shuffle]", "timeMs" : 0.169696, "averageMs" : 0.000808076, "percentage" : 0.00541925 }
+, { "name" : "PWN(Add_648, PWN((Unnamed Layer* 1024) [Constant] + (Unnamed Layer* 1025) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 1020) [Constant] + (Unnamed Layer* 1021) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 1016) [Constant] + (Unnamed Layer* 1017) [Shuffle], Div_650), Erf_651), Add_653)), Mul_654), Mul_656)))", "timeMs" : 11.7488, "averageMs" : 0.0559465, "percentage" : 0.375197 }
+, { "name" : "(Unnamed Layer* 1027) [Constant] + (Unnamed Layer* 1028) [Shuffle]", "timeMs" : 0.132096, "averageMs" : 0.000629028, "percentage" : 0.00421848 }
+, { "name" : "MatMul_657", "timeMs" : 40.4502, "averageMs" : 0.19262, "percentage" : 1.29178 }
+, { "name" : "(Unnamed Layer* 1030) [Constant] + (Unnamed Layer* 1031) [Shuffle]", "timeMs" : 0.175008, "averageMs" : 0.000833372, "percentage" : 0.00558889 }
+, { "name" : "PWN(Add_658, Add_659)", "timeMs" : 3.37747, "averageMs" : 0.0160832, "percentage" : 0.10786 }
+, { "name" : "ReduceMean_660", "timeMs" : 1.85546, "averageMs" : 0.00883551, "percentage" : 0.0592541 }
+, { "name" : "Sub_661", "timeMs" : 2.86189, "averageMs" : 0.013628, "percentage" : 0.0913945 }
+, { "name" : "PWN((Unnamed Layer* 1037) [Constant] + (Unnamed Layer* 1038) [Shuffle], Pow_664)", "timeMs" : 1.69578, "averageMs" : 0.00807513, "percentage" : 0.0541547 }
+, { "name" : "ReduceMean_665", "timeMs" : 1.38432, "averageMs" : 0.006592, "percentage" : 0.0442083 }
+, { "name" : "(Unnamed Layer* 1046) [Constant] + (Unnamed Layer* 1047) [Shuffle]", "timeMs" : 0.10624, "averageMs" : 0.000505906, "percentage" : 0.00339278 }
+, { "name" : "(Unnamed Layer* 1049) [Constant] + (Unnamed Layer* 1050) [Shuffle]", "timeMs" : 0.113952, "averageMs" : 0.000542629, "percentage" : 0.00363907 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 1041) [Constant] + (Unnamed Layer* 1042) [Shuffle], Add_667), Sqrt_668), Div_669), Mul_670), Add_671)", "timeMs" : 4.40435, "averageMs" : 0.0209731, "percentage" : 0.140653 }
+, { "name" : "(Unnamed Layer* 1052) [Constant] + (Unnamed Layer* 1053) [Shuffle]", "timeMs" : 0.107456, "averageMs" : 0.000511696, "percentage" : 0.00343162 }
+, { "name" : "MatMul_672", "timeMs" : 29.8204, "averageMs" : 0.142002, "percentage" : 0.952316 }
+, { "name" : "Split_673_2", "timeMs" : 4.35606, "averageMs" : 0.0207432, "percentage" : 0.139111 }
+, { "name" : "Reshape_680 + Transpose_681 + Reshape_682", "timeMs" : 5.39136, "averageMs" : 0.0256731, "percentage" : 0.172173 }
+, { "name" : "Split_673", "timeMs" : 5.32045, "averageMs" : 0.0253355, "percentage" : 0.169909 }
+, { "name" : "Reshape_674 + Transpose_675 + Reshape_676", "timeMs" : 4.71786, "averageMs" : 0.022466, "percentage" : 0.150665 }
+, { "name" : "Split_673_1", "timeMs" : 7.35286, "averageMs" : 0.0350136, "percentage" : 0.234814 }
+, { "name" : "Reshape_677 + Transpose_678 + Reshape_679 + Transpose_683", "timeMs" : 4.92746, "averageMs" : 0.0234641, "percentage" : 0.157358 }
+, { "name" : "MatMul_684", "timeMs" : 15.9538, "averageMs" : 0.0759703, "percentage" : 0.509484 }
+, { "name" : "Softmax_687", "timeMs" : 24.1278, "averageMs" : 0.114894, "percentage" : 0.770521 }
+, { "name" : "MatMul_688", "timeMs" : 18.2352, "averageMs" : 0.0868343, "percentage" : 0.582341 }
+, { "name" : "Reshape_689 + Transpose_690 + Reshape_691", "timeMs" : 5.34672, "averageMs" : 0.0254606, "percentage" : 0.170748 }
+, { "name" : "(Unnamed Layer* 1079) [Constant] + (Unnamed Layer* 1080) [Shuffle]", "timeMs" : 0.12832, "averageMs" : 0.000611047, "percentage" : 0.0040979 }
+, { "name" : "MatMul_692", "timeMs" : 12.3298, "averageMs" : 0.0587134, "percentage" : 0.393753 }
+, { "name" : "(Unnamed Layer* 1082) [Constant] + (Unnamed Layer* 1083) [Shuffle]", "timeMs" : 0.266048, "averageMs" : 0.0012669, "percentage" : 0.00849625 }
+, { "name" : "PWN(Add_693, Add_694)", "timeMs" : 3.64442, "averageMs" : 0.0173544, "percentage" : 0.116385 }
+, { "name" : "ReduceMean_695", "timeMs" : 1.90733, "averageMs" : 0.00908251, "percentage" : 0.0609106 }
+, { "name" : "Sub_696", "timeMs" : 3.02186, "averageMs" : 0.0143898, "percentage" : 0.0965031 }
+, { "name" : "PWN((Unnamed Layer* 1089) [Constant] + (Unnamed Layer* 1090) [Shuffle], Pow_699)", "timeMs" : 1.7648, "averageMs" : 0.00840381, "percentage" : 0.0563589 }
+, { "name" : "ReduceMean_700", "timeMs" : 1.52246, "averageMs" : 0.00724983, "percentage" : 0.0486199 }
+, { "name" : "(Unnamed Layer* 1098) [Constant] + (Unnamed Layer* 1099) [Shuffle]", "timeMs" : 0.13232, "averageMs" : 0.000630096, "percentage" : 0.00422565 }
+, { "name" : "(Unnamed Layer* 1101) [Constant] + (Unnamed Layer* 1102) [Shuffle]", "timeMs" : 0.165056, "averageMs" : 0.000785981, "percentage" : 0.00527107 }
+, { "name" : "PWN(PWN(PWN(PWN(PWN((Unnamed Layer* 1093) [Constant] + (Unnamed Layer* 1094) [Shuffle], Add_702), Sqrt_703), Div_704), Mul_705), Add_706)", "timeMs" : 4.73699, "averageMs" : 0.0225571, "percentage" : 0.151276 }
+, { "name" : "(Unnamed Layer* 1104) [Constant] + (Unnamed Layer* 1105) [Shuffle]", "timeMs" : 0.133312, "averageMs" : 0.00063482, "percentage" : 0.00425733 }
+, { "name" : "MatMul_707", "timeMs" : 34.3077, "averageMs" : 0.16337, "percentage" : 1.09562 }
+, { "name" : "(Unnamed Layer* 1107) [Constant] + (Unnamed Layer* 1108) [Shuffle]", "timeMs" : 0.262528, "averageMs" : 0.00125013, "percentage" : 0.00838384 }
+, { "name" : "PWN(Add_708, PWN((Unnamed Layer* 1118) [Constant] + (Unnamed Layer* 1119) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 1114) [Constant] + (Unnamed Layer* 1115) [Shuffle], PWN(PWN(PWN((Unnamed Layer* 1110) [Constant] + (Unnamed Layer* 1111) [Shuffle], Div_710), Erf_711), Add_713)), Mul_714), Mul_716)))", "timeMs" : 11.8156, "averageMs" : 0.056265, "percentage" : 0.377333 }
+, { "name" : "(Unnamed Layer* 1121) [Constant] + (Unnamed Layer* 1122) [Shuffle]", "timeMs" : 0.170976, "averageMs" : 0.000814172, "percentage" : 0.00546012 }
+, { "name" : "MatMul_717", "timeMs" : 40.3896, "averageMs" : 0.192331, "percentage" : 1.28984 }
+, { "name" : "(Unnamed Layer* 1124) [Constant] + (Unnamed Layer* 1125) [Shuffle]", "timeMs" : 0.136864, "averageMs" : 0.000651733, "percentage" : 0.00437075 }
+, { "name" : "PWN(Add_718, Add_719)", "timeMs" : 3.4192, "averageMs" : 0.0162819, "percentage" : 0.109192 }
+]

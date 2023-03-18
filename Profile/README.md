@@ -1,6 +1,6 @@
 # Profiling ViTs
 
-The code will be uploaded as soon as we sorted it out.
+We released profiling scripts on both GPU and Edge GPU (NVIDIA Jetson TX2). See `./GPU_benchmark` and `./TX2_benchmark` for more details.
 
 ---
 

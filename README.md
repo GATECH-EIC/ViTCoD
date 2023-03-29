@@ -5,7 +5,7 @@
 **Haoran You**, Zhanyi Sun, Huihong Shi, Zhongzhi Yu, Yang Zhao, Yongan Zhang, Chaojian Li, Baopu Li and Yingyan Lin
 
 Accepted by [**HPCA 2023**](https://hpca-conf.org/2023/). More Info:
-\[ [**Paper**](https://arxiv.org/abs/2210.09573) | [**Slide**](https://drive.google.com/file/d/1NIWiqxac8ufF-nzslpZzEU9ZQ69GLe2b/view?usp=share_link) | [**Youtube**]() | [**Github**](https://github.com/GATECH-EIC/ViTCoD/) \]
+\[ [**Paper**](https://arxiv.org/abs/2210.09573) | [**Slide**](https://drive.google.com/file/d/1NIWiqxac8ufF-nzslpZzEU9ZQ69GLe2b/view?usp=share_link) | [**Youtube**](https://youtu.be/Foyuctc8aPE) | [**Github**](https://github.com/GATECH-EIC/ViTCoD/) \]
 
 ---
 

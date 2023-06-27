@@ -1,0 +1,218 @@
+[2023/06/27 21:16:10] - Shape: (12, 3, 197, 64)
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 0; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 1; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 2; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 3; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 4; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 5; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 6; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 7; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 8; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 9; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 10; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - Layer: 11; Head: 0
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:16:10] - Embedding decoder | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:16:10] - ************
+[2023/06/27 21:16:10] - Embedding dataloader | cycles: 0
+[2023/06/27 21:16:10] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:16:10] - 
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:16:10] - total linear preprocessing cycles: 0
+[2023/06/27 21:16:10] - total linear preloading cycles: 23304
+[2023/06/27 21:16:10] - total linear computation cycles: 681492
+[2023/06/27 21:16:10] - total ffn preloading cycles: 0
+[2023/06/27 21:16:10] - total ffn computation cycles: 1361664
+[2023/06/27 21:16:10] - 
+[2023/06/27 21:16:10] - total linear cycles: 681492
+[2023/06/27 21:16:10] - total ffn cycles: 1361664
+[2023/06/27 21:16:10] - total cycles: 2043156
+[2023/06/27 21:16:10] - ******************************
+[2023/06/27 21:23:59] - Shape: (12, 3, 197, 64)
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 0; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 1; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 2; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 3; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 4; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 5; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 6; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 7; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 8; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 9; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 10; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - Layer: 11; Head: 0
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 1942
+[2023/06/27 21:23:59] - Embedding decoder | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 56791
+[2023/06/27 21:23:59] - ************
+[2023/06/27 21:23:59] - Embedding dataloader | cycles: 0
+[2023/06/27 21:23:59] - Embedding calcuation | cycles: 113472
+[2023/06/27 21:23:59] - 
+[2023/06/27 21:23:59] - ******************************
+[2023/06/27 21:23:59] - total linear preprocessing cycles: 0
+[2023/06/27 21:23:59] - total linear preloading cycles: 23304
+[2023/06/27 21:23:59] - total linear computation cycles: 681492
+[2023/06/27 21:23:59] - total ffn preloading cycles: 0
+[2023/06/27 21:23:59] - total ffn computation cycles: 1361664
+[2023/06/27 21:23:59] - 
+[2023/06/27 21:23:59] - total linear cycles: 681492
+[2023/06/27 21:23:59] - total ffn cycles: 1361664
+[2023/06/27 21:23:59] - total cycles: 2043156
+[2023/06/27 21:23:59] - ******************************

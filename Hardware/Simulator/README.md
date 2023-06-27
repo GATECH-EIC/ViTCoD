@@ -21,7 +21,13 @@ which correspondingly generates a numpy file (e.g., ./masks/deit_tiny_lowrank/gl
 
 To simulate the latency of attention computation, run
 ````
-python ViTCoD.py
+python ViTCoD.py \
+--root 'masks/deit_tiny_lowrank' \
+--sparse 0.95 \
+--feature_dim 64 \
+--ratio 0.667 \
+--PE_width 64 \
+--PE_height 8
 ````
 where we adopt a ***dynamic*** *PE allocation* between the ***denser*** and ***sparser engines*** to balance the workload of processing the denser and sparser patterns of different attention head, and leverage the on-chip ***decoder*** to reconstruct Q and K that are compressed by the on-chip ***encoder*** for saving data access costs. 
 
@@ -31,7 +37,14 @@ where we adopt a ***dynamic*** *PE allocation* between the ***denser*** and ***s
 To simulate the end-to-end latency, 
 * first run
 ````
-python ViT_FFN.py
+python ViT_FFN.py \
+--root 'masks/deit_tiny_lowrank' \
+--sparse 0.95 \
+--feature_dim 64 \
+--embedding 192 \
+--ratio 0.667 \
+--PE_width 64 \
+--PE_height 8
 ````
 which simulates the latency consumed by the remaining ***linear projections*** and ***MLPs***, 
 * then add the simulated latency with the previously simulated attention latency. 

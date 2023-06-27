@@ -7,15 +7,29 @@ from scipy.sparse import coo_matrix
 import logging
 import os
 import math
+import argparse
 
-root = 'masks/deit_tiny_lowrank'
-# root = 'masks/reorder/deit/reorder_att/deit_base'
-sparse = [0.95]
+def get_args_parser():
+    parser = argparse.ArgumentParser('ViTCoD attn similation script', add_help=False)
+    parser.add_argument('--root', default='masks/deit_tiny_lowrank', type=str)
+    parser.add_argument('--sparse', type=float, default=[0.95], nargs='+', help='the sparsity of the model')
+    parser.add_argument('--feature_dim', default=64, type=int, help='the feature dimension of Q/K/V')
+    parser.add_argument('--ratio', default=2/3, type=float, help='the compression ratio of encoder/decoder')
+    parser.add_argument('--PE_width', default=64, type=int)
+    parser.add_argument('--PE_height', default=8, type=int)
+    return parser
 
-for p in sparse:
+parser = argparse.ArgumentParser('ViTCoD attn similation script', parents=[get_args_parser()])
+args = parser.parse_args()
+
+# args.root = 'masks/deit_tiny_lowrank'
+# args.root = 'masks/reorder/deit/reorder_att/deit_base'
+# args.sparse = [0.95]
+
+for p in args.sparse:
     # Logging
     log = logging.getLogger()
-    log_path = os.path.join(root, 'vitcod_atten_'+str(p)+'_wo.txt')
+    log_path = os.path.join(args.root, 'vitcod_atten_'+str(p)+'_wo.txt')
     handlers = [logging.FileHandler(log_path, mode='a+'),
                 logging.StreamHandler()]
     logging.basicConfig(
@@ -24,13 +38,13 @@ for p in sparse:
         level=logging.INFO,
         handlers=handlers)
     # Initialize Q, K, V and attn maps
-    attn_map_mask = np.load(root+'/reodered_info_'+str(p)+'.npy')
-    num_global_tokens = np.load(root+'/global_token_info_'+str(p)+'.npy')
+    attn_map_mask = np.load(args.root+'/reodered_info_'+str(p)+'.npy')
+    num_global_tokens = np.load(args.root+'/global_token_info_'+str(p)+'.npy')
     
     # dim of (layer, head, token, features)
-    all_Q = np.random.random((attn_map_mask.shape[0], attn_map_mask.shape[1], attn_map_mask.shape[2], 64))
-    all_K = np.random.random((attn_map_mask.shape[0], attn_map_mask.shape[1], attn_map_mask.shape[2], 64))
-    all_V = np.random.random((attn_map_mask.shape[0], attn_map_mask.shape[1], attn_map_mask.shape[2], 64))
+    all_Q = np.random.random((attn_map_mask.shape[0], attn_map_mask.shape[1], attn_map_mask.shape[2], args.feature_dim))
+    all_K = np.random.random((attn_map_mask.shape[0], attn_map_mask.shape[1], attn_map_mask.shape[2], args.feature_dim))
+    all_V = np.random.random((attn_map_mask.shape[0], attn_map_mask.shape[1], attn_map_mask.shape[2], args.feature_dim))
     log.info('Shape: {}'.format(all_V.shape))
     my_SRAM = SRAM()
     my_PE = PE_array()
@@ -43,9 +57,9 @@ for p in sparse:
 
     head = all_Q.shape[1]
     # the compression ratio of head via the encoder
-    ratio = 2/3
-    PE_width = 64
-    PE_height = 8
+    # args.ratio = 2/3
+    # PE_width = 64
+    # PE_height = 8
 
     total_sparse_ratio = 0
     for _layer in range(all_Q.shape[0]):
@@ -67,6 +81,9 @@ for p in sparse:
                 sparse_ratio = 0
             else:
                 sparse_ratio = len(sparser)/(mask[:, global_tokens:].shape[0]*mask[:, global_tokens:].shape[1])
+                # print("sparse_ratio:", sparse_ratio)
+                # print("reload_ratio:", len(sparser)/(mask[:, global_tokens:].shape[1]))
+                # break
             total_sparse_ratio += sparse_ratio
             # log.info('number of non-zeros in the sparser region: {}'.format(len(sparser)))
 
@@ -78,11 +95,11 @@ for p in sparse:
             for _sta_k in range(global_tokens): 
                 # ############ k #########
                 # ######### Load k and decoder weight
-                preload_cycles += my_SRAM.preload_K(nums=head*ratio*1* K.shape[1], bits=8, bandwidth_ratio=1)
+                preload_cycles += my_SRAM.preload_K(nums=head*args.ratio*1* K.shape[1], bits=8, bandwidth_ratio=1)
                 if _sta_k == 0:
-                    preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
+                    preload_cycles += my_SRAM.preload_decoder(nums=head*args.ratio*1, bits=8, bandwidth_ratio=1/head)
                 # ######### Preprocessing 
-                for k in range((math.ceil((head*ratio*1* K.shape[1])/int(PE_width*PE_height/head)))):
+                for k in range((math.ceil((head*args.ratio*1* K.shape[1])/int(args.PE_width*args.PE_width/head)))):
                     PRE_cycles += 1
                 for _sta_q in range(int(Q.shape[0])):
                     if _sta_k == 0:
@@ -90,11 +107,11 @@ for p in sparse:
                     # ######### Load q and decoder weight
                         # reload_ratio = (Q.shape[0]-(my_SRAM.max_Q/(8*Q.shape[1]*head)))/Q.shape[0]
                         reload_ratio = 0
-                        preload_cycles += my_SRAM.preload_Q(nums=head*ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1)*(1+reload_ratio)
+                        preload_cycles += my_SRAM.preload_Q(nums=head*args.ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1)*(1+reload_ratio)
                         if _sta_q == 0: 
-                            preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
+                            preload_cycles += my_SRAM.preload_decoder(nums=head*args.ratio*1, bits=8, bandwidth_ratio=1/head)
                         # ######### Preprocessing 
-                        for q in range(math.ceil((head*ratio*1* Q.shape[1])/int(PE_width*PE_height/head))):
+                        for q in range(math.ceil((head*args.ratio*1* Q.shape[1])/int(args.PE_width*args.PE_width/head))):
                             PRE_cycles += 1*(1+reload_ratio)
             
             total_PRE_cycles += PRE_cycles
@@ -109,11 +126,11 @@ for p in sparse:
             # ############ k #########
             # ######### Load K and decoder weights
             for i in range(K.shape[0]-global_tokens):
-                preload_cycles += my_SRAM.preload_K(nums=head*ratio*1* K.shape[1], bits=8, bandwidth_ratio=1)
+                preload_cycles += my_SRAM.preload_K(nums=head*args.ratio*1* K.shape[1], bits=8, bandwidth_ratio=1)
                 if i == 0:
-                    preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
+                    preload_cycles += my_SRAM.preload_decoder(nums=head*args.ratio*1, bits=8, bandwidth_ratio=1/head)
                 # ######### Preprocessing 
-                for k in range(math.ceil((head*ratio*1* K.shape[1])/int(PE_width*PE_height/head))):
+                for k in range(math.ceil((head*args.ratio*1* K.shape[1])/int(args.PE_width*args.PE_width/head))):
                     PRE_cycles += 1
             
             # ############ Q #########
@@ -123,11 +140,11 @@ for p in sparse:
             if global_tokens==0:
                 reload_ratio = len(sparser)/mask[:, global_tokens:].shape[1]
                 for i in range(Q.shape[0]):
-                    preload_cycles += my_SRAM.preload_Q(nums=head*ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1)*reload_ratio
+                    preload_cycles += my_SRAM.preload_Q(nums=head*args.ratio*1* Q.shape[1], bits=8, bandwidth_ratio=1)*reload_ratio
                     if i == 0:
-                        preload_cycles += my_SRAM.preload_decoder(nums=head*ratio*1, bits=8, bandwidth_ratio=1/head)
+                        preload_cycles += my_SRAM.preload_decoder(nums=head*args.ratio*1, bits=8, bandwidth_ratio=1/head)
                     # ######### Preprocessing 
-                    for k in range(math.ceil((head*ratio*1* Q.shape[1])/int(PE_width*PE_height/head))):
+                    for k in range(math.ceil((head*args.ratio*1* Q.shape[1])/int(args.PE_width*args.PE_width/head))):
                         PRE_cycles += 1*reload_ratio
             total_PRE_cycles += PRE_cycles
             total_preload_cycles += preload_cycles
@@ -140,20 +157,20 @@ for p in sparse:
             # DATA_cycles = 0
             # TODO:
             dense_ratio = global_tokens*Q.shape[0]/(len(sparser) + global_tokens*Q.shape[0])
-            dense_PE_width = int(PE_width*dense_ratio)
-            sparse_PE_width = PE_width - dense_PE_width
+            dense_PE_width = int(args.PE_width*dense_ratio)
+            sparse_PE_width = args.PE_width - dense_PE_width
             # ############## dense pattern q*k ##############
             dense_SDDMM_PE_cycles = 0
             for _sta_k in range(global_tokens):
                 for _sta_q in range(math.ceil(Q.shape[0]/dense_PE_width)):
-                    for _tile_q in range(math.ceil(Q.shape[1] / (PE_height/head))):
+                    for _tile_q in range(math.ceil(Q.shape[1] / (args.PE_width/head))):
                         dense_SDDMM_PE_cycles += 1
             log.info('Dense SDMM PE caclulation | cycles: {}'.format(dense_SDDMM_PE_cycles))
             # ############## simoutalous sparse pattern q*k ##############
             sparse_SDDMM_PE_cycles = 0
-            # for _sta_k in range(math.ceil(len(sparser)*Q.shape[1]/int(sparse_PE_width*PE_height/head))):
+            # for _sta_k in range(math.ceil(len(sparser)*Q.shape[1]/int(sparse_PE_width*args.PE_width/head))):
             for _sta_k in range(math.ceil(len(sparser)/(sparse_PE_width))):
-                for _tile_q in range(math.ceil(Q.shape[1] / (PE_height/head))):
+                for _tile_q in range(math.ceil(Q.shape[1] / (args.PE_width/head))):
                     sparse_SDDMM_PE_cycles += 1
             log.info('Sparse SDMM PE caclulation | cycles: {}'.format(sparse_SDDMM_PE_cycles))
             SDDMM_PE_cycles = max(dense_SDDMM_PE_cycles, sparse_SDDMM_PE_cycles)
@@ -170,7 +187,7 @@ for p in sparse:
             log.info('Dense SpMM dataloader | cycles: {}'.format(preload_cycles))
             # ############## dense pattern s*v ##############
             dense_SpMM_PE_cycles = 0
-            for _tile_attn in range(math.ceil((V.shape[0]*V.shape[1]*global_tokens) / int(dense_PE_width*PE_height/head))):
+            for _tile_attn in range(math.ceil((V.shape[0]*V.shape[1]*global_tokens) / int(dense_PE_width*args.PE_width/head))):
                 dense_SpMM_PE_cycles += 1
             # total_SpMM_PE_cycles += SpMM_PE_cycles
             log.info('Dense SpMM PE caclulation | cycles: {}'.format(dense_SpMM_PE_cycles))
@@ -197,28 +214,29 @@ for p in sparse:
             sparse_SpMM_PE_cycles = 0
             preload_cycles = 0
             for _tile_k in range(attn_map.shape[0]-global_tokens): 
-                preload_cycles += my_SRAM.preload_V(nums=head*1* V.shape[1], bits=8)*(1+0.5)
+                # preload_cycles += my_SRAM.preload_V(nums=head*1* V.shape[1], bits=8)*(1+0.5)
+                preload_cycles += my_SRAM.preload_V(nums=head*1* V.shape[1], bits=8)
             total_preload_cycles += preload_cycles
             log.info('Sparse SpMM dataloader | cycles: {}'.format(preload_cycles))
             # ############## sparse pattern s*v ##############
             SpMM_PE_cycles = 0
             for row_num in num_list:
                 sparse_SpMM_PE_cycles += row_num*V.shape[1]
-            sparse_SpMM_PE_cycles = math.ceil(sparse_SpMM_PE_cycles/int(sparse_PE_width*PE_height/head))
+            sparse_SpMM_PE_cycles = math.ceil(sparse_SpMM_PE_cycles/int(sparse_PE_width*args.PE_width/head))
             log.info('Sparse SpMM PE caclulation | cycles: {}'.format(sparse_SpMM_PE_cycles))  
             SpMM_PE_cycles = max(sparse_SpMM_PE_cycles, dense_SpMM_PE_cycles)
             total_SpMM_PE_cycles += SpMM_PE_cycles
             
-            # for row_num in range(int(len(num_list)/PE_height)):
-            #     # for _tile_attn in range(int(row_num / PE_height)):
-            #     for _tile_v in range(int(V.shape[1] / PE_width)):  # do not need to plus one if 64 / 64 == 0
+            # for row_num in range(int(len(num_list)/args.PE_width)):
+            #     # for _tile_attn in range(int(row_num / args.PE_width)):
+            #     for _tile_v in range(int(V.shape[1] / args.PE_width)):  # do not need to plus one if 64 / 64 == 0
             #         for _tile_k in range(num_list[row_num]): 
             #             SpMM_PE_cycles += 1
 
             # ########### linear transformation
             # Linear_PE_cycles = 0
-            # for _tile_attn in range(int(attn_map.shape[0] / PE_height)):
-            #     for _tile_v in range(int(V.shape[1] / PE_width)):  
+            # for _tile_attn in range(int(attn_map.shape[0] / args.PE_width)):
+            #     for _tile_v in range(int(V.shape[1] / args.PE_width)):  
             #         for _tile_k in range(V.shape[0]):
             #             Linear_PE_cycles += 1
             # print('Linear PE caclulation | cycles: {}'.format(Linear_PE_cycles))
@@ -231,11 +249,11 @@ for p in sparse:
         # K = all_K[_layer, _head]
         # V = all_V[_layer, _head]
         # for h in range(6):
-        #     for q in range(int((Q.shape[0]*Q.shape[1])/(PE_width*PE_width))):
+        #     for q in range(int((Q.shape[0]*Q.shape[1])/(args.PE_width*args.PE_width))):
         #         for h in range(12):
         #             PRE_cycles += 1
             
-        #     for k in range(int((K.shape[0]*K.shape[1])/(PE_width*PE_width))):
+        #     for k in range(int((K.shape[0]*K.shape[1])/(args.PE_width*args.PE_width))):
         #         for h in range(12):
         #             PRE_cycles += 1
 
